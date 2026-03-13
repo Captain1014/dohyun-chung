@@ -114,7 +114,7 @@ export default function WorkPage() {
             </p>
           ))}
           <p className="leading-relaxed">
-            If you're interested in what I do outside of work, check out my{" "}
+            If you&apos;re interested in what I do outside of work, check out my{" "}
             <Link href={aboutPagePath} className="underline hover:no-underline">
               about
             </Link>{" "}

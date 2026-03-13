@@ -118,20 +118,20 @@ export default function AboutPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Intro</h2>
         <p className="mb-4">
-          Hi there 👋🏼 I'm Dohyun!
+          Hi there 👋🏼 I&apos;m Dohyun!
         </p>
         <p className="mb-4">
           I was born and raised in Alexandria, Egypt, and moved to the US for my undergraduate studies. After graduating with a degree in computer science, I began working as a{" "}
           <Link href="/work" className="underline hover:no-underline">
             Product Manager
           </Link>{" "}
-          in tech, and I'm currently based in San Francisco.
+          in tech, and I&apos;m currently based in San Francisco.
         </p>
         <p className="mb-4">
           While I love my day job, what gives me life is all the work I do after my 9-5. I spend most of my time after work and on weekends indulging in all sorts of creative activities like writing, podcasting, or video creating. Most of the content I make is targeted towards teaching others whatever humble knowledge or experience I was able to attain as I journey through life.
         </p>
         <p>
-          I'd be delighted if you read my{" "}
+          I&apos;d be delighted if you read my{" "}
           <Link href="/blog" className="underline hover:no-underline">blog</Link>, listen to my{" "}
           <a href="https://open.spotify.com/show/647BDylp2P5kUNc0fHyceo" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">podcast</a>, or watch my{" "}
           <a href="https://youtube.com/@omareletr" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">YouTube</a> videos.
@@ -197,9 +197,9 @@ export default function AboutPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Let's Connect</h2>
+        <h2 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h2>
         <p className="mb-4">
-          Set up time to chat online or meet together in person if you're in The Bay. Coffee's on me :)
+          Set up time to chat online or meet together in person if you&apos;re in The Bay. Coffee&apos;s on me :)
         </p>
         <a
           href="https://cal.com/omareletr/coffee-chat"
