@@ -5,10 +5,10 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { TopBar } from "@/components/TopBar";
 import { SideNav } from "@/components/SideNav";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
 });
 const syne = Syne({
   subsets: ["latin"],
@@ -50,7 +50,7 @@ export default function RootLayout({
           <TopBar />
           <SideNav />
           <main
-            className="flex-1 pl-14 min-h-screen"
+            className="flex-1 pl-0 md:pl-14 min-h-screen"
             style={{ paddingTop: "var(--top-bar-height)" }}
           >
             {children}

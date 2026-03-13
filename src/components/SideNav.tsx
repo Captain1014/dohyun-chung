@@ -50,7 +50,7 @@ export function SideNav() {
 
   return (
     <nav
-      className="fixed left-0 bottom-0 w-14 flex flex-col items-center justify-center gap-6 py-6 border-r border-l-2 z-40"
+      className="hidden md:flex fixed left-0 bottom-0 w-14 flex-col items-center justify-center gap-6 py-6 border-r border-l-2 z-40"
       style={{
         top: "var(--top-bar-height)",
         backgroundColor: "var(--sidebar-bg)",

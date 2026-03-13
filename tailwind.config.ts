@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-inter)"],
+        mono: ["var(--font-mono)"],
         serif: ["Georgia", "serif"],
-        display: ["var(--font-display)", "var(--font-geist-sans)", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-inter)", "sans-serif"],
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",

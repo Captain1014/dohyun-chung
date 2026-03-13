@@ -2,10 +2,15 @@
 
 import { useTheme } from "@/components/ThemeProvider";
 
+let audioCtx: AudioContext | null = null;
+
 function playClickSound() {
   if (typeof window === "undefined") return;
   try {
-    const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    }
+    const ctx = audioCtx;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     osc.connect(gain);

@@ -80,7 +80,7 @@ export default function WorkPage() {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/yourprofile/"
+            href="https://www.linkedin.com/in/dohyun-chung"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[var(--foreground)] bg-[var(--foreground)] px-4 py-2.5 text-sm font-medium text-[var(--background)] hover:bg-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
@@ -253,91 +253,18 @@ export default function WorkPage() {
         <h2 className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider mb-8">
           Contact
         </h2>
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="flex justify-center">
           <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--border)] px-5 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--foreground)]/10 transition-colors"
+            href={`mailto:${contactEmail}`}
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] px-8 py-3 text-sm font-medium text-[var(--background)] hover:opacity-90 transition-opacity"
           >
-            Hire Me
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--border)] px-5 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--foreground)]/10 transition-colors"
-          >
-            Coffee Chat
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--border)] px-5 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--foreground)]/10 transition-colors"
-          >
-            1:1 Mentorship
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M4 17l6-6-6-6" />
-              <path d="M12 19h8" />
+            Get in Touch
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
             </svg>
           </a>
         </div>
-        <div className="flex items-center gap-4 mb-8">
-          <span className="h-px flex-1 bg-[var(--border)]" />
-          <span className="text-sm text-[var(--muted)]">or</span>
-          <span className="h-px flex-1 bg-[var(--border)]" />
-        </div>
-        <form className="space-y-4 max-w-xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Your name"
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--border)] px-4 py-3 text-[var(--foreground)] placeholder:text-[var(--muted)] focus:border-[var(--muted)] focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--border)] px-4 py-3 text-[var(--foreground)] placeholder:text-[var(--muted)] focus:border-[var(--muted)] focus:outline-none"
-            />
-          </div>
-          <textarea
-            placeholder="I actually look at these. Please feel free to type your message here and I'll get back to you asap :)"
-            rows={5}
-            className="w-full rounded-lg border border-[var(--border)] bg-[var(--border)] px-4 py-3 text-[var(--foreground)] placeholder:text-[var(--muted)] focus:border-[var(--muted)] focus:outline-none resize-y"
-          />
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="rounded-lg bg-[var(--foreground)] px-8 py-3 text-sm font-medium text-[var(--background)] hover:opacity-90 transition-opacity"
-            >
-              Send
-            </button>
-          </div>
-        </form>
       </section>
       </div>
     </div>
