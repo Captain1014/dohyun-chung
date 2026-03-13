@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { experience, projects, skillsByCategory, education } from "@/data/work";
+import { experience, projects, skillsByCategory, education, resumeUrl } from "@/data/work";
 import { KeywordMarquee } from "@/components/KeywordMarquee";
 import { HeroReveal } from "@/components/HeroReveal";
 
@@ -19,17 +19,31 @@ export default function WorkPage() {
               <h1 className="text-7xl md:text-8xl font-bold tracking-tight leading-none mb-3">Work</h1>
               <p className="text-[var(--muted)]">Technical Product Manager & Software Engineer</p>
             </div>
-            <a
-              href="https://www.linkedin.com/in/dohyun-chung"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 self-start sm:self-auto px-4 py-2 rounded-full border border-[var(--foreground)] text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
-            >
-              LinkedIn
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7v10" />
-              </svg>
-            </a>
+            <div className="flex items-center gap-3 self-start sm:self-auto">
+              <a
+                href={resumeUrl}
+                download
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--foreground)] text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
+              >
+                Resume
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dohyun-chung"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--foreground)] text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
+              >
+                LinkedIn
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+              </a>
+            </div>
           </header>
         </HeroReveal>
 
@@ -53,6 +67,16 @@ export default function WorkPage() {
                     <p className="font-semibold">{item.title}</p>
                     <p className="text-sm text-[var(--muted)]">{item.company}</p>
                     <p className="text-xs font-mono text-[var(--muted)] mt-1">{item.dateRange}</p>
+                    {item.description && item.description.length > 0 && (
+                      <ul className="mt-4 space-y-2">
+                        {item.description.map((bullet, j) => (
+                          <li key={j} className="flex gap-2 text-sm text-[var(--muted)] leading-relaxed">
+                            <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-[var(--muted)] opacity-50" />
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </li>
               ))}

@@ -8,25 +8,19 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    title: "TPM & Software Engineer",
+    title: "Technical PM & Software Engineer",
     company: "Kiss Products, Inc.",
     dateRange: "Apr 2024 — Present",
     description: [
-      "Governed launch readiness and strategic vision of a multi-tenant B2B retail ordering platform (POS); defined feature roadmap and licensing strategy. Authored Technical Specifications and acted as Technical PM, translating ERP data exchange requirements into secure, scalable API designs.",
-      "Oversaw Agile program execution across complex program streams, managing a global vendor team and cross-functional stakeholders (IT and business).",
-      "Engineered the sales order app for Kiss Europe with offline capability for unstable network environments.",
-      "Drove full lifecycle development of internal systems: Cafeteria Kiosk, helpdesk software, hardware integration (RFID, touch), and data visualization for kitchen display TV.",
+      "Defined vision, designed multi-tenant architecture, and shipped a full enterprise retail OS end-to-end.",
     ],
   },
   {
-    title: "Front-end Engineer",
+    title: "Front-end Engineer & PM",
     company: "24/7 Teach",
     dateRange: "May 2023 — Apr 2024",
     description: [
-      "Drove strategic UI/UX decisions for \"Naomi AI,\" ensuring high usability and accessibility for 3,000+ K-12 students.",
-      "Collaborated with CEO and Marketing to analyze conversion data, influencing feature prioritization and user retention.",
-      "Defined data retrieval requirements and optimized API payloads with the backend team for critical student-facing features.",
-      "Designed and implemented features with curriculum designers, translating engagement analytics and teacher feedback into product improvements.",
+      "Led product and front-end for Naomi AI, an AI-powered K-12 platform serving 3,000+ students.",
     ],
   },
   {
@@ -34,9 +28,7 @@ export const experience: ExperienceItem[] = [
     company: "SkyIT Services",
     dateRange: "Jan 2023 — Apr 2023",
     description: [
-      "Engineered the client-side experience for a B2B logistics platform using React: inventory management and real-time shipment tracking.",
-      "Collaborated with back-end engineers to define and optimize API consumption patterns.",
-      "Applied Agile methodologies; led on-time deployment of a key client-facing dashboard feature.",
+      "Built inventory management and shipment tracking for a B2B logistics platform in React.",
     ],
   },
 ];
@@ -52,7 +44,7 @@ export interface ProjectItem {
 export const projects: ProjectItem[] = [
   {
     title: "K Retail Solutions",
-    description: "Re-architecting retail operations for global scalability: multi-tenant engineering and process recovery.",
+    description: "Building a multi-tenant enterprise retail OS for Kiss Products' New York stores — from architecture to launch.",
     slug: "krs-tpm-case-study",
   },
   {
@@ -62,34 +54,30 @@ export const projects: ProjectItem[] = [
 ];
 
 export const skillsByCategory: Record<string, string[]> = {
-  "Product Management": [
+  "Product": [
     "Technical Product Management",
-    "Stakeholder Management",
     "Roadmapping",
-    "Prioritization",
-    "Product Strategy",
-    "User Research",
-    "UX Design",
-    "Wireframing",
-    "Data Analysis",
-    "A/B Testing",
+    "Stakeholder Management",
     "Agile / Scrum",
     "Vendor Management",
+    "API Design",
     "Launch Readiness",
+    "PRD Writing",
+    "Functional Specification",
   ],
   "Engineering": [
     "Full-Stack Development",
     "REST API Design",
-    "API Integration",
+    "SQL",
     "Data Visualization",
+    "Open Source Platform Development",
   ],
   "Tools": [
     "Jira",
     "Figma",
     "Notion",
-    "SQL",
   ],
-  "Languages": ["English", "Korean"],
+  "Languages": ["Korean (Native)", "English (Fluent)"],
 };
 
 export interface EducationItem {
@@ -109,12 +97,11 @@ export const education: EducationItem[] = [
 ];
 
 export const bioParagraphs = [
-  "I'm a Technical Product Manager and Software Engineer based in New York. I work at the intersection of product, engineering, and design—from defining roadmaps and writing Technical Specs to building client-side applications and APIs.",
-  "At Kiss Products I lead launch readiness for a B2B retail platform and engineer internal tools; previously I drove UI/UX and front-end for 24/7 Teach's Naomi AI (3,000+ K-12 students) and shipped features for B2B logistics at SkyIT.",
-  "I focus on user-centric solutions, clear execution, and strong collaboration with global and cross-functional teams.",
+  "Technical Product Manager and Software Engineer with 3 years of experience delivering complex B2B platforms across retail, edtech, and logistics.",
+  "Specializes in cross-cultural stakeholder management, ERP and API systems design, and full-cycle product delivery — from roadmap definition to production engineering.",
 ];
 
 export const aboutPagePath = "/about";
 
 export const contactEmail = "leahchung99@gmail.com";
-export const resumeUrl = "#"; // Replace with your hosted PDF URL when available
+export const resumeUrl = "/resume_dohyun_chung.pdf";

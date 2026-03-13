@@ -18,7 +18,7 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   title: "Dohyun Chung",
-  description: "Welcome to my home on the internet.",
+  description: "Technical Product Manager & Software Engineer. 3 years delivering B2B platforms across retail, edtech, and logistics.",
 };
 
 export default function RootLayout({

@@ -152,9 +152,6 @@ export default function AboutPage() {
       <HeroReveal className="pb-20">
         <section>
           <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Let&apos;s Connect</h2>
-          <p className="mb-6 text-[var(--muted)]">
-            I&apos;m always happy to meet new people — whether you want to talk tech, travel, language learning, or just say hi. Drop me a line.
-          </p>
           <a
             href="mailto:leahchung99@gmail.com"
             className="inline-block px-5 py-2.5 border border-[var(--foreground)] rounded-full text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
