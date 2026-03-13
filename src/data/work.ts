@@ -8,7 +8,7 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    title: "PM & Software Engineer",
+    title: "TPM & Software Engineer",
     company: "Kiss Products, Inc.",
     dateRange: "Apr 2024 — Present",
     description: [
@@ -19,7 +19,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: "PM & Front-end Engineer",
+    title: "Front-end Engineer",
     company: "24/7 Teach",
     dateRange: "May 2023 — Apr 2024",
     description: [
@@ -51,7 +51,7 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "Kiss POS (KRS)",
+    title: "K Retail Solutions",
     description: "Re-architecting retail operations for global scalability: multi-tenant engineering and process recovery.",
     slug: "krs-tpm-case-study",
   },
@@ -59,38 +59,37 @@ export const projects: ProjectItem[] = [
     title: "Naomi AI (24/7 Teach)",
     description: "Strategic UI/UX and front-end for an AI-powered K-12 learning platform serving 3,000+ students; accessibility and usability focus.",
   },
-  {
-    title: "Kiss Europe Sales Order App",
-    description: "End-to-end sales order application with offline capability for field use in unstable network environments.",
-  },
-  {
-    title: "Cafeteria Kiosk & Helpdesk",
-    description: "Internal systems with hardware integration (RFID, touch), kitchen display TV data visualization, and automated Windows scripting.",
-  },
-  {
-    title: "B2B Logistics Platform (SkyIT)",
-    description: "React-based inventory management and real-time shipment tracking for a B2B logistics client.",
-  },
 ];
 
 export const skillsByCategory: Record<string, string[]> = {
-  "Product & Engineering": [
+  "Product Management": [
     "Technical Product Management",
-    "B2B E-commerce Strategy",
-    "API Analysis & Integration",
-    "Software Engineering",
-    "PRD / Functional Specification",
-    "Agile Project Management (Jira)",
-    "Quantitative Data Analysis (SQL)",
+    "Stakeholder Management",
+    "Roadmapping",
+    "Prioritization",
+    "Product Strategy",
+    "User Research",
+    "UX Design",
+    "Wireframing",
+    "Data Analysis",
+    "A/B Testing",
+    "Agile / Scrum",
+    "Vendor Management",
+    "Launch Readiness",
   ],
-  "Tools & Methods": [
-    "Jira",
-    "React",
-    "SQL",
-    "Figma",
+  "Engineering": [
+    "Full-Stack Development",
+    "REST API Design",
+    "API Integration",
     "Data Visualization",
   ],
-  "Languages": ["English", "Korean (Bilingual)"],
+  "Tools": [
+    "Jira",
+    "Figma",
+    "Notion",
+    "SQL",
+  ],
+  "Languages": ["English", "Korean"],
 };
 
 export interface EducationItem {

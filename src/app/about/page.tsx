@@ -1,216 +1,168 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import { AboutHero } from "@/components/AboutHero";
+import { HeroReveal } from "@/components/HeroReveal";
 
-const AboutScene = dynamic(() => import("@/components/AboutScene").then((m) => m.AboutScene), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full min-h-[60vh] bg-[var(--background)] flex items-center justify-center">
-      <p className="font-mono text-[var(--muted)]">Loading...</p>
-    </div>
-  ),
-});
+const skills = {
+  confident: [
+    { name: "Piano 🎹", note: "years of lessons + still play" },
+    { name: "Drums 🥁", note: "another after-school rabbit hole" },
+    { name: "Dance 💃", note: "I'm in a lot of Times Square street performance videos on YouTube apparently" },
+{ name: "Building apps 💻", note: "things that make my life smarter" },
+  ],
+  explored: [
+    { name: "Taekwondo 🥋", note: "ofc, I'm Korean" },
+    { name: "Violin 🎻", note: "got through the painful phase" },
+    { name: "Flute 🪈", note: "brief but real" },
+    { name: "Arduino 🤖", note: "want to build an auto-watering plant machine + the scariest halloween costume ever" },
+  ],
+  wantToTry: [
+    { name: "Ballet 🩰", note: "always wanted" },
+    { name: "Figure Skating ⛸️", note: "someday" },
+  ],
+};
 
-const hobbies = [
-  "Reading 📚",
-  "Writing ✍🏼",
-  "Making Videos 📹",
-  "Podcasting 🎙",
-  "Learning 🧠",
-  "Design 🖌️",
-  "Spiritual Circles 📿",
-  "Piano 🎹",
-  "Cooking 👨🏻‍🍳",
-  "Baking 🥧",
-  "Football ⚽",
-  "Squash 🎾",
-  "Padel 🎾",
-  "Pickleball 🏓",
-  "Skiing ⛷️",
-  "Bouldering 🧗🏽",
-  "Scuba Diving 🤿",
-  "Pottery 🏺",
-  "Astrophotography 🌌",
-  "Debates 🗣",
-  "Hiking ⛰️",
-];
-
-const yesList = [
-  { text: "Free Palestine 🇵🇸", href: "https://irusa.org/middle-east/palestine/" },
-  "Critical Thinking",
-  "Stand-up Comedy",
-  "Escape Rooms",
-  "Dark Humor",
-  "Houseplants",
-  "Desi Food",
-  "The Sea/Ocean",
-  "Board Games",
-  "Nature",
-  "Turtlenecks",
-  "Sunshine",
-  "Masala Chai",
-  "Therapy",
-  "Adrenaline",
-  "Cheese",
-  "Quality Time",
-];
-
-const noList = [
-  "Group Think",
-  "Cities",
-  "Western Hegemony",
-  "Parties",
-  "Gossip",
-  "Capitalism",
-  "Organized Education",
-  "Suits",
-  "Concerts",
-  "Mainstream Weddings",
-  "Sushi",
-  "Identity Politics",
-  "Postmodernism",
-  "Festivals",
-  "Drip Coffee",
-  "Workism",
-  "Pop Culture",
-  "Astrology",
-  "Individualism",
+const languages = [
+  { name: "Daegu Korean", note: "home dialect" },
+  { name: "Seoul Korean", note: "standard" },
+  { name: "English", note: "" },
+  { name: "Mandarin", note: "" },
+  { name: "Japanese", note: "" },
+  { name: "Spanish", note: "" },
+  { name: "Greek", note: "" },
+  { name: "Albanian", note: "a little" },
 ];
 
 const countries = [
-  "Egypt 🇪🇬 👶🏼",
-  "UAE 🇦🇪",
-  "United States 🇺🇸",
-  "Canada 🇨🇦",
-  "Mexico 🇲🇽",
-  "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-  "Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-  "Malaysia 🇲🇾",
-  "Turkey 🇹🇷",
-  "Saudi Arabia 🇸🇦",
+  "South Korea 🇰🇷 🏠", "United States 🇺🇸", "Guam 🇬🇺",
+  "Japan 🇯🇵", "China 🇨🇳", "Hong Kong 🇭🇰", "Taiwan 🇹🇼",
+  "Vietnam 🇻🇳", "Italy 🇮🇹", "Greece 🇬🇷",
+  "Macedonia 🇲🇰", "Albania 🇦🇱",
 ];
 
-const edc = [
-  { category: "Everyday Tech", items: ["16\" M3 Pro MacBook Pro", "iPhone 13 Pro", "AirPods Pro (2nd Gen)", "Apple Watch Series 6"] },
-  {
-    category: "Things I can't leave my apartment without",
-    items: ["Takva Prayer Mat", "Nomad Card Wallet", "Anker 621 Magnetic Battery (MagGo)", "Multi-Charging Cable", "Hand Sanitizer", "Lip Balm", "Tide Pen", "Microfiber Cloth"],
-  },
-];
 
 export default function AboutPage() {
   return (
-    <div className="relative">
-      {/* 3D Hero */}
-      <section className="relative w-full min-h-[60vh] flex items-end justify-start pb-8 pl-6 md:pl-14">
-        <AboutScene />
-        <div className="relative z-10 pointer-events-none max-w-4xl">
-          <p className="font-mono text-sm text-white/70 mb-2">7:08 FP</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">About</h1>
-          <h2 className="text-xl text-white/80 font-normal drop-shadow">
-            welcome to my home on the internet
-          </h2>
-        </div>
-      </section>
+    <div className="max-w-4xl mx-auto px-6">
+      <AboutHero />
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      {/* Intro */}
+      <HeroReveal className="mb-16">
+        <section>
+          <p className="text-lg leading-relaxed mb-5">
+            Hi! I&apos;m Dohyun — born and raised in South Korea, moved to New York by myself
+            to study Computer Science and Sociology at NYU. Lived my dream in the city for
+            years, and now I&apos;m taking a big next step: going back to Korea to open a new
+            chapter, stay close to my grandmother, and be near the people I love.
+          </p>
+          <p className="text-lg leading-relaxed mb-5">
+            Growing up, both my parents worked hard and didn&apos;t want me sitting home alone
+            after school — so they enrolled me in at least two extracurriculars every single day.
+            Instruments, dance, sports. You name it, I probably tried it.
+          </p>
+          <p className="text-lg leading-relaxed mb-5">
+            For a long time, that made me feel like I wasn&apos;t truly talented at anything —
+            just comfortably <em>mid</em> at everything. But I&apos;ve come to love it. Being
+            genuinely curious about many different fields is a superpower, and it&apos;s a big part
+            of what makes me a good{" "}
+            <Link href="/work" className="underline hover:no-underline">Technical Product Manager</Link>.
+          </p>
+        </section>
+      </HeroReveal>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Intro</h2>
-        <p className="mb-4">
-          Hi there 👋🏼 I&apos;m Dohyun!
-        </p>
-        <p className="mb-4">
-          I was born and raised in Alexandria, Egypt, and moved to the US for my undergraduate studies. After graduating with a degree in computer science, I began working as a{" "}
-          <Link href="/work" className="underline hover:no-underline">
-            Product Manager
-          </Link>{" "}
-          in tech, and I&apos;m currently based in San Francisco.
-        </p>
-        <p className="mb-4">
-          While I love my day job, what gives me life is all the work I do after my 9-5. I spend most of my time after work and on weekends indulging in all sorts of creative activities like writing, podcasting, or video creating. Most of the content I make is targeted towards teaching others whatever humble knowledge or experience I was able to attain as I journey through life.
-        </p>
-        <p>
-          I&apos;d be delighted if you read my{" "}
-          <Link href="/blog" className="underline hover:no-underline">blog</Link>, listen to my{" "}
-          <a href="https://open.spotify.com/show/647BDylp2P5kUNc0fHyceo" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">podcast</a>, or watch my{" "}
-          <a href="https://youtube.com/@omareletr" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">YouTube</a> videos.
-        </p>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Hobbies</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {hobbies.map((h) => (
-            <li key={h}>{h}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Yes</h2>
-        <ul className="space-y-2">
-          {yesList.map((item) =>
-            typeof item === "string" ? (
-              <li key={item}>{item}</li>
-            ) : (
-              <li key={item.text}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
-                  {item.text}
-                </a>
-              </li>
-            )
-          )}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">No</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {noList.map((n) => (
-            <li key={n}>{n}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Countries Visited</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {countries.map((c) => (
-            <li key={c}>{c}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">EDC</h2>
-        {edc.map(({ category, items }) => (
-          <div key={category} className="mb-6">
-            <h3 className="text-lg font-medium mb-2">{category}</h3>
-            <ul className="list-disc list-inside space-y-1">
-              {items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+      {/* Skills */}
+      <HeroReveal className="mb-16">
+        <section>
+          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-6">Things I&apos;ve Picked Up Along the Way</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div>
+              <p className="text-sm font-mono text-[var(--muted)] mb-4">pretty good at ✓</p>
+              <ul className="space-y-4">
+                {skills.confident.map(({ name, note }) => (
+                  <li key={name}>
+                    <p className="font-medium text-sm">{name}</p>
+                    <p className="text-xs text-[var(--muted)] mt-0.5">{note}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-sm font-mono text-[var(--muted)] mb-4">dipped my toes ∼</p>
+              <ul className="space-y-4">
+                {skills.explored.map(({ name, note }) => (
+                  <li key={name}>
+                    <p className="font-medium text-sm">{name}</p>
+                    <p className="text-xs text-[var(--muted)] mt-0.5">{note}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-sm font-mono text-[var(--muted)] mb-4">really want to try ◎</p>
+              <ul className="space-y-4">
+                {skills.wantToTry.map(({ name, note }) => (
+                  <li key={name}>
+                    <p className="font-medium text-sm">{name}</p>
+                    <p className="text-xs text-[var(--muted)] mt-0.5">{note}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        ))}
-      </section>
+        </section>
+      </HeroReveal>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h2>
-        <p className="mb-4">
-          Set up time to chat online or meet together in person if you&apos;re in The Bay. Coffee&apos;s on me :)
-        </p>
-        <a
-          href="https://cal.com/omareletr/coffee-chat"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-4 py-2 border border-[var(--foreground)] rounded hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
-        >
-          Coffee Chat
-        </a>
-      </section>
-      </div>
+      {/* Languages */}
+      <HeroReveal className="mb-16">
+        <section>
+          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Languages</h2>
+          <p className="text-xs text-[var(--muted)] mb-4">most fluent → least</p>
+          <ol className="space-y-2">
+            {languages.map(({ name, note }, i) => (
+              <li key={name} className="flex items-baseline gap-3">
+                <span className="text-xs font-mono text-[var(--muted)] w-4 shrink-0">{i + 1}</span>
+                <span className="text-sm">{name}</span>
+                {note && <span className="text-xs text-[var(--muted)]">— {note}</span>}
+              </li>
+            ))}
+          </ol>
+        </section>
+      </HeroReveal>
+
+      {/* Countries */}
+      <HeroReveal className="mb-16">
+        <section>
+          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Countries Visited</h2>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {countries.map((c) => (
+              <span key={c} className="px-3 py-1.5 rounded-full border border-[var(--border)] text-sm opacity-80">
+                {c}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-[var(--muted)] mb-6">
+            I love going back to places I&apos;ve already been — I miss the good times everywhere I&apos;ve gone.
+          </p>
+          <p className="text-xs text-[var(--muted)]">
+            One place I&apos;ll probably never get to: North Korea 🇰🇵 — I&apos;ve watched a lot of documentaries about it. My heart goes out to the people there.
+          </p>
+        </section>
+      </HeroReveal>
+
+      {/* Connect */}
+      <HeroReveal className="pb-20">
+        <section>
+          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Let&apos;s Connect</h2>
+          <p className="mb-6 text-[var(--muted)]">
+            I&apos;m always happy to meet new people — whether you want to talk tech, travel, language learning, or just say hi. Drop me a line.
+          </p>
+          <a
+            href="mailto:leahchung99@gmail.com"
+            className="inline-block px-5 py-2.5 border border-[var(--foreground)] rounded-full text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
+          >
+            Email me →
+          </a>
+        </section>
+      </HeroReveal>
     </div>
   );
 }

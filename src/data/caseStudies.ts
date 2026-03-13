@@ -43,11 +43,11 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "krs-tpm-case-study",
-    title: "Kiss POS (KRS)",
+    title: "K Retail Solutions",
     subtitle: "Re-architecting Retail Operations for Global Scalability",
     pdfUrl: "/KRS_TPM_CaseStudy_EN.pdf",
     overview: {
-      product: "Kiss POS (KRS) — Enterprise Retail OS built on Odoo 18",
+      product: "K Retail Solutions — Enterprise Retail OS built on Odoo 18",
       role: "Technical Product Manager",
       team: "India vendor dev (10) + India vendor PM + In-house business team (10) + In-house dev team (3)",
       coreMission: "Bridge complex ERP architecture with seamless field operations across 4 stakeholder groups",
