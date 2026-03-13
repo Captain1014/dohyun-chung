@@ -42,47 +42,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* UPDATES - commented out
-      <StaggerItem delay={0}>
-        <h2 className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider mb-8">
-          Updates
-        </h2>
-      </StaggerItem>
-      <ul className="space-y-8">
-        {updates.map((update, i) => (
-          <li key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-            <span className="text-sm text-[var(--muted)] shrink-0 sm:w-20">
-              {update.date}
-            </span>
-            <div className="flex-1 min-w-0">
-              {update.href ? (
-                update.href.startsWith("http") ? (
-                  <a
-                    href={update.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:underline"
-                  >
-                    {update.title}
-                  </a>
-                ) : (
-                  <Link href={update.href} className="text-white hover:underline">
-                    {update.title}
-                  </Link>
-                )
-              ) : (
-                <span className="text-white">{update.title}</span>
-              )}
-              <div className="mt-2">
-                <span className="inline-flex items-center rounded-md border border-[#3b82f6] bg-transparent px-2 py-0.5 text-xs font-medium text-white">
-                  {update.category}
-                </span>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-      */}
     </div>
   );
 }

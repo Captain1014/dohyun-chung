@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useCallback } from "react";
+import Image from "next/image";
 
 const MAX_TILT = 14;
 const PERSPECTIVE = 1200;
@@ -46,10 +47,12 @@ export function Profile3DCard() {
           transformStyle: "preserve-3d",
         }}
       >
-        <img
+        <Image
           src="/IMG_1006.jpg"
           alt="Dohyun Chung"
-          className="w-full h-full object-cover absolute inset-0"
+          fill
+          className="object-cover"
+          priority
           draggable={false}
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
