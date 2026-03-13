@@ -6,9 +6,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", icon: "home" },
   { href: "/work", icon: "command" },
-  { href: "/blog", icon: "pencil" },
   { href: "/about", icon: "user" },
-  { href: "/gallery", icon: "gallery" },
 ];
 
 const icons: Record<string, React.ReactNode> = {
