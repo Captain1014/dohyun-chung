@@ -1,229 +1,176 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, MeshTransmissionMaterial, Points, PointMaterial } from "@react-three/drei";
+import {
+  Float,
+  MeshTransmissionMaterial,
+  Instance,
+  Instances,
+  Mask,
+  useMask,
+  CameraControls,
+  Environment,
+  Lightformer,
+  AccumulativeShadows,
+  RandomizedLight,
+} from "@react-three/drei";
 import * as THREE from "three";
 
-// 4000 particle spiral galaxy
-function ParticleGalaxy() {
-  const pointsRef = useRef<THREE.Points>(null);
+const SPHERES: [number, string, number, [number, number, number]][] = [
+  [0.38, "#ff6b9d", 1.0,  [ 0.9,  0.3,  0.5]],
+  [0.30, "#39ff14", 1.5,  [-0.7,  0.6,  0.2]],
+  [0.34, "#22d3ee", 0.8,  [ 0.2, -0.5, -0.7]],
+  [0.26, "#fbbf24", 2.0,  [-0.8, -0.3,  0.5]],
+  [0.32, "#a78bfa", 1.2,  [ 0.6,  0.8, -0.4]],
+  [0.20, "#fb923c", 1.8,  [-0.4,  0.7,  0.6]],
+  [0.28, "#f472b6", 0.9,  [ 0.7, -0.6,  0.3]],
+  [0.22, "#34d399", 1.4,  [-0.5, -0.8, -0.4]],
+  [0.18, "#60a5fa", 2.2,  [ 0.4,  0.1,  0.9]],
+  [0.24, "#e879f9", 1.1,  [-0.2,  0.9, -0.6]],
+];
 
-  const positions = useMemo(() => {
-    const count = 4000;
-    const arr = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      const angle = Math.random() * Math.PI * 2;
-      const radius = Math.pow(Math.random(), 0.6) * 9;
-      const armOffset = radius * 0.4;
-      const spread = (Math.random() - 0.5) * (1.2 - radius * 0.08);
-      arr[i * 3]     = Math.cos(angle + armOffset) * radius;
-      arr[i * 3 + 1] = spread;
-      arr[i * 3 + 2] = Math.sin(angle + armOffset) * radius;
-    }
-    return arr;
-  }, []);
+// Glass sphere — writes to stencil so contents are clipped inside
+function GlassBowl({ children }: { children: React.ReactNode }) {
+  const contentsRef = useRef<THREE.Group>(null);
+  const stencil = useMask(1, false);
 
-  useFrame((state) => {
-    if (pointsRef.current) {
-      pointsRef.current.rotation.y = state.clock.elapsedTime * 0.025;
-    }
-  });
-
-  return (
-    <Points ref={pointsRef} positions={positions} stride={3} frustumCulled={false}>
-      <PointMaterial
-        transparent
-        color="#39ff14"
-        size={0.018}
-        sizeAttenuation
-        depthWrite={false}
-        opacity={0.65}
-      />
-    </Points>
-  );
-}
-
-// Central iridescent glass orb
-function GlassOrb() {
-  const meshRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.12;
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.07;
-    }
-  });
+  useLayoutEffect(() => {
+    contentsRef.current?.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        Object.assign((child as THREE.Mesh).material, { ...stencil });
+      }
+    });
+  }, [stencil]);
 
   return (
-    <mesh ref={meshRef}>
-      <icosahedronGeometry args={[1.1, 4]} />
-      <MeshTransmissionMaterial
-        backside
-        samples={6}
-        thickness={0.9}
-        chromaticAberration={0.2}
-        anisotropy={0.6}
-        distortion={0.35}
-        distortionScale={0.25}
-        temporalDistortion={0.15}
-        iridescence={1}
-        iridescenceIOR={1.6}
-        iridescenceThicknessRange={[0, 1400]}
-        color="#39ff14"
-        roughness={0}
-        envMapIntensity={1}
-      />
-    </mesh>
-  );
-}
-
-// 3 orbital rings at different inclinations
-function OrbitalRings() {
-  const r1 = useRef<THREE.Mesh>(null);
-  const r2 = useRef<THREE.Mesh>(null);
-  const r3 = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    const t = state.clock.elapsedTime;
-    if (r1.current) r1.current.rotation.z = t * 0.28;
-    if (r2.current) r2.current.rotation.x = t * 0.19;
-    if (r3.current) {
-      r3.current.rotation.y = t * 0.22;
-      r3.current.rotation.z = t * 0.1;
-    }
-  });
-
-  return (
-    <>
-      <mesh ref={r1}>
-        <torusGeometry args={[1.75, 0.012, 16, 120]} />
-        <meshStandardMaterial color="#39ff14" metalness={1} roughness={0} emissive="#39ff14" emissiveIntensity={0.5} />
+    <group>
+      {/* Write stencil shape */}
+      <Mask id={1} colorWrite={false} depthWrite={false}>
+        <sphereGeometry args={[2, 64, 64]} />
+      </Mask>
+      {/* Actual glass surface */}
+      <mesh renderOrder={-1000}>
+        <sphereGeometry args={[2, 64, 64]} />
+        <MeshTransmissionMaterial
+          backside
+          samples={4}
+          thickness={0.3}
+          chromaticAberration={0.04}
+          anisotropy={0.15}
+          distortion={0.08}
+          distortionScale={0.08}
+          temporalDistortion={0.2}
+          iridescence={1}
+          iridescenceIOR={1}
+          iridescenceThicknessRange={[0, 1400]}
+        />
       </mesh>
-      <mesh ref={r2} rotation={[Math.PI / 3, 0, Math.PI / 5]}>
-        <torusGeometry args={[2.15, 0.009, 16, 120]} />
-        <meshStandardMaterial color="#a78bfa" metalness={1} roughness={0} emissive="#a78bfa" emissiveIntensity={0.4} />
-      </mesh>
-      <mesh ref={r3} rotation={[Math.PI / 2, Math.PI / 7, 0]}>
-        <torusGeometry args={[2.55, 0.007, 16, 120]} />
-        <meshStandardMaterial color="#22d3ee" metalness={1} roughness={0} emissive="#22d3ee" emissiveIntensity={0.3} />
-      </mesh>
-    </>
+      {/* Contents masked to sphere */}
+      <group ref={contentsRef}>{children}</group>
+    </group>
   );
 }
 
-// Orbiting satellite gems
-function OrbitingSatellite({ radius, speed, offset, color, size }: {
-  radius: number; speed: number; offset: number; color: string; size: number;
-}) {
-  const meshRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    const t = state.clock.elapsedTime * speed + offset;
-    if (meshRef.current) {
-      meshRef.current.position.x = Math.cos(t) * radius;
-      meshRef.current.position.z = Math.sin(t) * radius;
-      meshRef.current.position.y = Math.sin(t * 0.7) * 0.4;
-      meshRef.current.rotation.x += 0.02;
-      meshRef.current.rotation.y += 0.015;
-    }
-  });
-
+// Floating colored spheres inside the bowl
+function FloatingSpheres() {
   return (
-    <mesh ref={meshRef} scale={size}>
-      <octahedronGeometry args={[1, 0]} />
-      <meshStandardMaterial color={color} metalness={0.8} roughness={0.05} emissive={color} emissiveIntensity={0.3} />
-    </mesh>
-  );
-}
-
-// Floating crystal shards in background
-function BackgroundCrystals() {
-  const shards = useMemo(() => [
-    { pos: [-4, 2, -3] as [number,number,number],   s: 0.28, c: "#f472b6", spd: 0.7 },
-    { pos: [3.8, 2.5, -4] as [number,number,number], s: 0.22, c: "#fbbf24", spd: 1.0 },
-    { pos: [-3, -2.5, -2] as [number,number,number], s: 0.32, c: "#22d3ee", spd: 0.8 },
-    { pos: [3.2, -2, -3] as [number,number,number],  s: 0.2,  c: "#a78bfa", spd: 1.2 },
-    { pos: [0, 3.5, -4] as [number,number,number],   s: 0.18, c: "#39ff14", spd: 0.9 },
-    { pos: [-1.5, -3, -2] as [number,number,number], s: 0.24, c: "#fb923c", spd: 0.6 },
-  ], []);
-
-  return (
-    <>
-      {shards.map((s, i) => (
-        <Float key={i} speed={s.spd} rotationIntensity={0.5} floatIntensity={0.5}>
-          <mesh position={s.pos} scale={s.s}>
-            <octahedronGeometry args={[1, 0]} />
-            <meshStandardMaterial color={s.c} metalness={0.7} roughness={0.05} emissive={s.c} emissiveIntensity={0.25} />
-          </mesh>
+    <Instances renderOrder={-1000}>
+      <sphereGeometry args={[1, 32, 32]} />
+      <meshBasicMaterial depthTest={false} />
+      {SPHERES.map(([scale, color, speed, position], i) => (
+        <Float key={i} rotationIntensity={8} floatIntensity={6} speed={speed}>
+          <Instance scale={scale} color={color} position={position} />
         </Float>
       ))}
-    </>
+    </Instances>
   );
 }
 
-// Slow auto-pan camera (no OrbitControls)
-function CameraRig() {
+// Spinning torus knot as the centerpiece
+function CenterPiece() {
+  const ref = useRef<THREE.Mesh>(null);
   useFrame((state) => {
-    const t = state.clock.elapsedTime * 0.06;
-    state.camera.position.x = Math.sin(t) * 0.8 + 4.2;
-    state.camera.position.y = Math.cos(t * 0.8) * 0.4 + 2;
-    state.camera.lookAt(0, 0, 0);
-  });
-  return null;
-}
-
-// Orbiting point lights for caustics-like effect
-function DynamicLights() {
-  const l1 = useRef<THREE.PointLight>(null);
-  const l2 = useRef<THREE.PointLight>(null);
-
-  useFrame((state) => {
-    const t = state.clock.elapsedTime;
-    if (l1.current) {
-      l1.current.position.x = Math.cos(t * 0.4) * 4;
-      l1.current.position.z = Math.sin(t * 0.4) * 4;
-    }
-    if (l2.current) {
-      l2.current.position.x = Math.cos(t * 0.3 + Math.PI) * 5;
-      l2.current.position.z = Math.sin(t * 0.3 + Math.PI) * 5;
+    if (ref.current) {
+      ref.current.rotation.x = state.clock.elapsedTime * 0.25;
+      ref.current.rotation.y = state.clock.elapsedTime * 0.18;
     }
   });
-
   return (
-    <>
-      <ambientLight intensity={0.08} />
-      <pointLight ref={l1} position={[4, 3, 4]} intensity={3} color="#39ff14" />
-      <pointLight ref={l2} position={[-4, -2, 3]} intensity={2} color="#a78bfa" />
-      <pointLight position={[0, 6, -4]} intensity={1.5} color="#22d3ee" />
-    </>
+    <Float speed={1.2} floatIntensity={0.3}>
+      <mesh ref={ref} scale={0.32}>
+        <torusKnotGeometry args={[1, 0.32, 200, 32, 2, 3]} />
+        <meshStandardMaterial
+          color="#39ff14"
+          metalness={0.6}
+          roughness={0.1}
+          emissive="#39ff14"
+          emissiveIntensity={0.3}
+        />
+      </mesh>
+    </Float>
   );
 }
 
 function SceneContent() {
   return (
     <>
-      <DynamicLights />
-      <ParticleGalaxy />
-      <GlassOrb />
-      <OrbitalRings />
-      <OrbitingSatellite radius={2.15} speed={0.35} offset={0}            color="#39ff14" size={0.18} />
-      <OrbitingSatellite radius={2.15} speed={0.35} offset={Math.PI * 2/3} color="#f472b6" size={0.14} />
-      <OrbitingSatellite radius={2.15} speed={0.35} offset={Math.PI * 4/3} color="#22d3ee" size={0.16} />
-      <BackgroundCrystals />
-      <CameraRig />
+      <color attach="background" args={["#0a0a0a"]} />
+
+      {/* Glass bowl with contents */}
+      <GlassBowl>
+        <FloatingSpheres />
+        <CenterPiece />
+      </GlassBowl>
+
+      {/* Soft colored shadows on floor */}
+      <AccumulativeShadows
+        temporal
+        frames={80}
+        color="#39ff14"
+        colorBlend={0.4}
+        opacity={0.35}
+        scale={20}
+        position={[0, -3.2, 0]}
+      >
+        <RandomizedLight
+          amount={8}
+          radius={10}
+          ambient={0.5}
+          intensity={1}
+          position={[0, 6, -4]}
+          size={10}
+        />
+      </AccumulativeShadows>
+
+      {/* Environment: custom Lightformers for beautiful glass caustics */}
+      <Environment resolution={512}>
+        <group rotation={[-Math.PI / 3, 0, 0]}>
+          <Lightformer intensity={5} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={[10, 10, 1]} />
+          {[2, 0, 2, 0, 2, 0, 2, 0].map((x, i) => (
+            <Lightformer
+              key={i}
+              form="circle"
+              intensity={5}
+              rotation={[Math.PI / 2, 0, 0]}
+              position={[x, 4, i * 4]}
+              scale={[4, 1, 1]}
+            />
+          ))}
+          <Lightformer intensity={3} rotation-y={Math.PI / 2} position={[-5, 1, -1]} scale={[50, 2, 1]} />
+          <Lightformer intensity={3} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={[50, 2, 1]} />
+        </group>
+      </Environment>
+
+      <CameraControls truckSpeed={0} dollySpeed={0} minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
     </>
   );
 }
 
 export function AboutScene() {
   return (
-    <div className="absolute inset-0 w-full h-full min-h-[60vh]" style={{ background: "var(--background)" }}>
-      <Canvas
-        camera={{ position: [4.2, 2, 6], fov: 45 }}
-        gl={{ antialias: true, alpha: false }}
-        dpr={[1, 2]}
-      >
+    <div className="absolute inset-0 w-full h-full min-h-[60vh]">
+      <Canvas shadows camera={{ position: [0, 0, 8], fov: 35, near: 1, far: 50 }}>
         <SceneContent />
       </Canvas>
     </div>
