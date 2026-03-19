@@ -48,9 +48,9 @@ export const caseStudies: CaseStudy[] = [
     pdfUrl: "/KRS_TPM_CaseStudy_EN.pdf",
     overview: {
       product: "K Retail Solutions — Enterprise Retail OS",
-      role: "Technical Product Manager",
+      role: "Software Engineer & Technical Customer Lead",
       team: "India vendor dev (10) + India vendor PM + In-house business team (10) + In-house dev team (3)",
-      coreMission: "Bridge complex ERP architecture with seamless field operations across 4 stakeholder groups",
+      coreMission: "Serve as the technical bridge between 300+ end users, cross-border development teams, and business stakeholders — diagnosing issues, designing solutions, and driving customer adoption",
     },
     sections: [
       {

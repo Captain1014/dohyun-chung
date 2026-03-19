@@ -4,8 +4,8 @@ import { HeroReveal } from "@/components/HeroReveal";
 
 const skills = {
   confident: [
-    { name: "Piano 🎹", note: "years of lessons + still play" },
-    { name: "Drums 🥁", note: "another after-school rabbit hole" },
+    { name: "Piano 🎹", note: "the first instrument I learned" },
+    { name: "Drums 🥁", note: "ROCK AND ROLL" },
     { name: "Dance 💃", note: "I'm in a lot of Times Square street performance videos on YouTube apparently" },
 { name: "Building apps 💻", note: "things that make my life smarter" },
   ],
@@ -64,7 +64,7 @@ export default function AboutPage() {
             just comfortably <em>mid</em> at everything. But I&apos;ve come to love it. Being
             genuinely curious about many different fields is a superpower, and it&apos;s a big part
             of what makes me a good{" "}
-            <Link href="/work" className="underline hover:no-underline">Technical Product Manager</Link>.
+            <Link href="/work" className="underline hover:no-underline">Solutions Engineer</Link>.
           </p>
         </section>
       </HeroReveal>

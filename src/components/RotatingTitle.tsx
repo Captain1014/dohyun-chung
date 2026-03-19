@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const ROLES = [
-  "Technical Product Manager",
+  "Solutions Engineer",
   "Model",
   "Dancer",
   "Drummer",
