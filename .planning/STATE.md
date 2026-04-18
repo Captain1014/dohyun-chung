@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 Phase: 1 of 4 (GCP Foundation)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-04-18 - Completed quick task 260418-erx: SQL analytical practice track + timeline shift to 2027-01
+Last activity: 2026-04-18 - Completed quick task 260418-f3w: Section 9 re-evaluation checkpoint + Track A/B split
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -61,6 +61,7 @@ None yet.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 260418-erx | Add SQL analytical practice track to MASTER_PLAN.md (5 phases, 2026-04 to 2026-12) + shift application timeline to 2027-01 | 2026-04-18 | 2a9ab14 | [260418-erx-add-sql-analytical-practice-track-to-mas](./quick/260418-erx-add-sql-analytical-practice-track-to-mas/) |
+| 260418-f3w | Add 2026-10 re-evaluation checkpoint to Section 9 SQL track: Phase 3-4 Track A/B split (SQL sufficient → demo/STAR/competitive) | 2026-04-18 | 7116d02 | [260418-f3w-add-phase-2-re-evaluation-checkpoint-to-](./quick/260418-f3w-add-phase-2-re-evaluation-checkpoint-to-/) |
 
 ## Session Continuity
 
