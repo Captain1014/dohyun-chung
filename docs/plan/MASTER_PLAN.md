@@ -193,6 +193,8 @@
 
 **Why a dedicated track:** 자격증 강의만으로는 "SELECT/GROUP BY" 수준을 넘어선 분석형 SQL 감각이 쌓이지 않음. 현직자 갭 분석(Section 1)에서 "SQL 레벨업 필요"로 명시된 항목을 이 트랙으로 체계적으로 메운다.
 
+**핵심 원칙:** SE 차별화는 pre-sales storytelling이지 SQL 퍼즐이 아닙니다. 따라서 Phase 0-2로 SQL 기본기를 쌓은 뒤 **2026-10 말에 재평가**하여, SQL이 면접 bar를 넘었다면 Phase 3-4의 시간을 데모/STAR/경쟁사 분석으로 재분배합니다.
+
 ### Phase 개요
 
 | Phase | 기간 | 메인 리소스 | 주 목표 | 주간 페이스 | 산출물 / 마일스톤 |
@@ -200,14 +202,51 @@
 | **Phase 0 — LeetCode SQL 50 마무리** | 2026-04 (W1-W2) | LeetCode Top SQL 50 | 기본 문법·조인·집계 재확인 | 3-4 hrs/wk | SQL 50 완료 (4/13) |
 | **Phase 1 — StrataScratch 분석형 SQL** | 2026-05 ~ 2026-08 (~16주) | StrataScratch (주), DataLemur (보조), Mode Analytics 튜토리얼 | 비즈니스 문제형 쿼리, Easy→Medium 50+ 문제 | 3-5 hrs/wk | 2026-08 말: 50+ 문제 풀이 + 패턴 노트 |
 | **Phase 2 — BigQuery Window/CTE 실전** | 2026-09 ~ 2026-10 (~8주) | BigQuery 공개 데이터셋 (NYC taxi, GitHub, Google Trends) | window 함수, CTE, QUALIFY, 퍼널/코호트 쿼리 직접 작성 | 3-5 hrs/wk | 2026-10 말: 개인 쿼리 포트폴리오 10+ 개 |
-| **Phase 3 — Snowflake 시나리오 훈련** | 2026-11 ~ 2026-12 중순 (~6주) | Snowflake 트라이얼 + TPC-H 샘플 데이터 | warehouse 튜닝 + 분석 쿼리 시나리오 (예: 매출/리텐션/어트리뷰션) | 3-5 hrs/wk | 2026-12 중순: 시나리오 3-5개 문서화 (데모 재료) |
-| **Phase 4 — 면접 SQL 실전 준비** | 2026-12 말 ~ 2027-01 초 (~3주) | DataLemur SE 인터뷰셋 + 모의 라이브 코딩 | 45-60분 라이브 코딩 시뮬레이션, STAR + SQL 연결 | 3-5 hrs/wk | 2027-01 초: 모의 SQL 인터뷰 3회 완료 |
+| **🔀 2026-10 Re-evaluation** | 2026-10 말 (1주) | 모의 SQL 인터뷰 1회 + self-assessment rubric | SQL 면접 bar 도달 여부 판정 → Track A or Track B 선택 | 2-3 hrs | 재평가 결과 노트 + 경로 결정 |
+| **Phase 3A (Track A: SQL 충분) — Pre-sales 전환** | 2026-11 ~ 2026-12 중순 (~6주) | Snowflake 데모 환경 + 경쟁사 공식 자료 | 15-min Snowflake 데모 설계·리허설 + STAR 7개 refinement + 경쟁사 1-pager | 3-5 hrs/wk | 데모 스크립트 1개 + STAR 7개 (SF SE/GCP CE 버전) + 경쟁사 비교 1-pager |
+| **Phase 3B (Track B: SQL 갭 잔존) — Snowflake 시나리오 훈련** | 2026-11 ~ 2026-12 중순 (~6주) | Snowflake 트라이얼 + TPC-H 샘플 데이터 | warehouse 튜닝 + 분석 쿼리 시나리오 (매출/리텐션/어트리뷰션) | 3-5 hrs/wk | 2026-12 중순: 시나리오 3-5개 문서화 (데모 재료) |
+| **Phase 4A (Track A) — 최종 면접 리허설** | 2026-12 말 ~ 2027-01 초 (~3주) | 모의 인터뷰 (데모 + STAR + 행동 질문) | 데모 20분 + Q&A 25분 통합 리허설 | 3-5 hrs/wk | 2027-01 초: 종합 모의 인터뷰 2-3회 완료 |
+| **Phase 4B (Track B) — 면접 SQL 실전 준비** | 2026-12 말 ~ 2027-01 초 (~3주) | DataLemur SE 인터뷰셋 + 모의 라이브 코딩 | 45-60분 라이브 코딩 시뮬레이션, STAR + SQL 연결 | 3-5 hrs/wk | 2027-01 초: 모의 SQL 인터뷰 3회 완료 |
 
 ### 주간 리듬 (Phase 1-3 기준)
 
 - **평일 (화·목, 각 45-60분):** 문제 1-2개 풀고 해설 읽기 → 패턴 노트에 기록
 - **주말 (토 또는 일, 1-2시간):** 주간 리뷰 + 실제 데이터셋(BigQuery/Snowflake)에 응용 1회
 - **총 3-5시간/주** — 업무 몰릴 땐 3시간, 여유 있을 땐 5시간으로 조정 (하한은 지킴)
+
+### 2026-10 Re-evaluation Checkpoint
+
+Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**를 진행합니다. 이 체크포인트의 목적은 남은 9주(Phase 3-4)의 학습 시간을 SQL 드릴링에 계속 투자할지, 아니면 SE 면접에서 점수를 더 크게 움직이는 pre-sales 자산(데모/STAR/경쟁사)에 재분배할지 결정하는 것입니다.
+
+**SQL 면접 "sufficiency bar" (다 충족 시 Track A):**
+
+1. **Window functions 유창성** — ROW_NUMBER/RANK/DENSE_RANK, LAG/LEAD, 명시적 FRAME 절(ROWS BETWEEN)까지 막힘 없이 작성 가능
+2. **JOIN 라이브 코딩** — INNER/LEFT/SELF/ANTI join을 실시간으로 풀어내고, 필터 조건을 ON 절과 WHERE 절에 올바르게 분리할 수 있음
+3. **비즈니스 언어로 쿼리 설명** — 작성한 쿼리의 로직과 결과를 **영어**와 **한국어** 양쪽으로 비즈니스 이해관계자 수준으로 설명 가능 (단순 구문 설명이 아닌 "왜 이 쿼리가 이 비즈니스 질문에 답하는가")
+
+**재평가 메커니즘 (둘 중 하나 선택):**
+
+- **(A) 모의 SQL 인터뷰 1회 (권장):** DataLemur SE 인터뷰셋 또는 LLM(Claude/GPT) 기반 45-60분 라이브 코딩 세션. 녹화 후 위 3개 bar 항목별로 pass/fail 판정
+- **(B) Self-assessment rubric:** 3개 bar 항목에 대해 각각 "막힘 없이 가능 / 느리지만 가능 / 막힘" 체크. 3개 모두 "막힘 없이 가능"이면 통과
+
+**결정 트리:**
+
+```
+2026-10 말 재평가 결과
+│
+├─ SQL bar 3개 항목 모두 충족 (pass)
+│   └─ ▶ Track A: Phase 3A + Phase 4A (Pre-sales 전환)
+│          · 15-min Snowflake 데모 시나리오 설계 + 리허설
+│          · STAR story 7개 refinement (Snowflake SE + Google CE 버전)
+│          · 경쟁사 분석 1-pager (Snowflake vs Databricks/BigQuery/Redshift)
+│
+└─ SQL bar 1개 이상 미충족 (fail or partial)
+    └─ ▶ Track B: Phase 3B + Phase 4B (기존 SQL 시나리오/면접 훈련 유지)
+           · Snowflake 시나리오 훈련 (매출/리텐션/어트리뷰션)
+           · DataLemur SE 인터뷰셋 + 45-60분 라이브 코딩 반복
+```
+
+**기본 전제:** Phase 0-2를 성실히 수행했다면 Track A 경로가 유력합니다. Track B는 안전망으로 남겨두되, "SQL이 완벽하지 않으면 계속해야 한다"는 관성에 끌려가지 않도록 bar 기준을 엄격히 유지합니다. SE 면접의 합격 요인은 데모와 스토리이지 완벽한 SQL이 아니기 때문입니다.
 
 ### 리소스 요약
 
