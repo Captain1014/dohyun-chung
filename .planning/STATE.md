@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 Phase: 1 of 4 (GCP Foundation)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-03-26 — Roadmap created, ready to begin Phase 1 planning
+Last activity: 2026-04-18 - Completed quick task 260418-erx: SQL analytical practice track + timeline shift to 2027-01
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -56,8 +56,14 @@ None yet.
 - [Research]: ExamTopics practice answers occasionally wrong — verify against official GCP docs
 - [Research]: Vertex AI Agent Builder capabilities change rapidly — re-verify in Phase 3
 
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260418-erx | Add SQL analytical practice track to MASTER_PLAN.md (5 phases, 2026-04 to 2026-12) + shift application timeline to 2027-01 | 2026-04-18 | 2a9ab14 | [260418-erx-add-sql-analytical-practice-track-to-mas](./quick/260418-erx-add-sql-analytical-practice-track-to-mas/) |
+
 ## Session Continuity
 
-Last session: 2026-03-26
-Stopped at: Roadmap created. Phase 1 planning not yet started.
+Last session: 2026-04-18
+Stopped at: Quick task 260418-erx complete — SQL analytical practice track added, application timeline shifted to 2027-01.
 Resume file: None
