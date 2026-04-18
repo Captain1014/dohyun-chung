@@ -126,7 +126,8 @@
 
 | 항목 | 빈도 | 이유 |
 |------|------|------|
-| SQL 문제풀이 | 매일 1문제 | SE 면접에서 SQL 라이브 코딩 출제됨 |
+| SQL 분석 트랙 (Section 9) | 주 3-5시간 | 분석형 SQL · 윈도우 함수 · BigQuery/Snowflake 시나리오 — SE 면접 라이브 코딩 대비 |
+| SQL 가벼운 문제풀이 | 매일 1문제 (부담 없는 수준) | 감각 유지 — 본 훈련은 Section 9 SQL 트랙에서 누적 |
 | Snowflake 핸즈온 | 주 3회, 1시간 | 면접에서 "직접 해봤다"고 말할 수 있어야 함 |
 | LinkedIn 활동 | 주 1회 포스트/댓글 | Snowflake Korea + Google Korea 직원 네트워크 |
 | 데이터 아키텍처 공부 | 주 1회 | Lake/Warehouse/Lakehouse, ETL/ELT 패턴 |
@@ -179,6 +180,61 @@
 3. [ ] Snowflake 무료 트라이얼 계정 생성 (아직 안 했다면)
 4. [ ] SnowPro Core 시험 일정 확인 (온라인 응시 가능 여부)
 5. [ ] LinkedIn Job Alert 설정: Snowflake Korea SE, Google Korea CE
+
+---
+
+---
+
+## 9. SQL Analytical Practice Track
+
+**목표:** SE/Data 면접에서 자주 나오는 **분석형 SQL** (window, CTE, funnel, cohort, 비즈니스 문제 해결 쿼리)을 실전 수준으로 끌어올린다. 자격증 트랙(SnowPro/SAA/GCP)과 **병렬로** 돌리되, 업무와 병행 가능한 **주 3-5시간** 페이스로 누적한다.
+
+**전체 기간:** 2026-04 ~ 2026-12 (약 9개월, 주 3-5시간 × 36주 ≈ 108-180 시간)
+
+**Why a dedicated track:** 자격증 강의만으로는 "SELECT/GROUP BY" 수준을 넘어선 분석형 SQL 감각이 쌓이지 않음. 현직자 갭 분석(Section 1)에서 "SQL 레벨업 필요"로 명시된 항목을 이 트랙으로 체계적으로 메운다.
+
+### Phase 개요
+
+| Phase | 기간 | 메인 리소스 | 주 목표 | 주간 페이스 | 산출물 / 마일스톤 |
+|-------|------|-------------|---------|-------------|-------------------|
+| **Phase 0 — LeetCode SQL 50 마무리** | 2026-04 (W1-W2) | LeetCode Top SQL 50 | 기본 문법·조인·집계 재확인 | 3-4 hrs/wk | SQL 50 완료 (4/13) |
+| **Phase 1 — StrataScratch 분석형 SQL** | 2026-05 ~ 2026-08 (~16주) | StrataScratch (주), DataLemur (보조), Mode Analytics 튜토리얼 | 비즈니스 문제형 쿼리, Easy→Medium 50+ 문제 | 3-5 hrs/wk | 2026-08 말: 50+ 문제 풀이 + 패턴 노트 |
+| **Phase 2 — BigQuery Window/CTE 실전** | 2026-09 ~ 2026-10 (~8주) | BigQuery 공개 데이터셋 (NYC taxi, GitHub, Google Trends) | window 함수, CTE, QUALIFY, 퍼널/코호트 쿼리 직접 작성 | 3-5 hrs/wk | 2026-10 말: 개인 쿼리 포트폴리오 10+ 개 |
+| **Phase 3 — Snowflake 시나리오 훈련** | 2026-11 ~ 2026-12 중순 (~6주) | Snowflake 트라이얼 + TPC-H 샘플 데이터 | warehouse 튜닝 + 분석 쿼리 시나리오 (예: 매출/리텐션/어트리뷰션) | 3-5 hrs/wk | 2026-12 중순: 시나리오 3-5개 문서화 (데모 재료) |
+| **Phase 4 — 면접 SQL 실전 준비** | 2026-12 말 ~ 2027-01 초 (~3주) | DataLemur SE 인터뷰셋 + 모의 라이브 코딩 | 45-60분 라이브 코딩 시뮬레이션, STAR + SQL 연결 | 3-5 hrs/wk | 2027-01 초: 모의 SQL 인터뷰 3회 완료 |
+
+### 주간 리듬 (Phase 1-3 기준)
+
+- **평일 (화·목, 각 45-60분):** 문제 1-2개 풀고 해설 읽기 → 패턴 노트에 기록
+- **주말 (토 또는 일, 1-2시간):** 주간 리뷰 + 실제 데이터셋(BigQuery/Snowflake)에 응용 1회
+- **총 3-5시간/주** — 업무 몰릴 땐 3시간, 여유 있을 땐 5시간으로 조정 (하한은 지킴)
+
+### 리소스 요약
+
+| 리소스 | 페이즈 | 비용 | 용도 |
+|--------|--------|------|------|
+| LeetCode SQL 50 | Phase 0 | Free | 문법·조인 재확인 |
+| StrataScratch | Phase 1 (메인) | Free tier + 필요 시 유료 | 비즈니스 문제형 SQL (Airbnb, Uber, Google 등 실제 인터뷰 문제) |
+| DataLemur | Phase 1, 4 | Free tier + Premium | SE/Data 인터뷰 스타일 문제 + 해설 |
+| Mode Analytics SQL 튜토리얼 | Phase 1 초반 | Free | 분석 관점의 SQL 기초 다지기 |
+| BigQuery 공개 데이터셋 | Phase 2 | Free (1TB/월 쿼리 무료) | 실데이터로 window/CTE 연습 |
+| Snowflake 트라이얼 + TPC-H | Phase 3 | Free (30일 + $400 크레딧) | warehouse·시나리오 훈련 |
+
+### 산출물 (누적)
+
+1. `docs/study/sql-patterns.md` — StrataScratch/DataLemur에서 반복 등장하는 분석 쿼리 패턴 정리 (Phase 1 시작 시 생성)
+2. `docs/study/sql-portfolio/` — BigQuery/Snowflake에서 직접 작성한 쿼리 10+ 개 (Phase 2-3)
+3. `docs/study/sql-scenarios.md` — 3-5개 비즈니스 시나리오 (매출/리텐션/어트리뷰션) 쿼리 + 결과 해설 (데모 재료, Phase 3)
+4. `docs/study/sql-interview-log.md` — 모의 SQL 인터뷰 피드백 로그 (Phase 4)
+
+### 리스크 & 완화
+
+| 리스크 | 완화 |
+|--------|------|
+| 업무 바빠서 주 3시간도 못 채우는 주 발생 | Phase 1을 최대 4주까지 연장 허용. 하한(주 3시간)은 지키되 상한(5시간)은 flexible |
+| 자격증 공부(SnowPro/SAA)와 시간 충돌 | 자격증 기간(4-6월)에는 Phase 1 페이스를 하한(3 hrs/wk)로 낮추고, 자격증 이후 Phase 2부터 상한까지 끌어올림 |
+| 분석형 SQL은 혼자 풀면 피드백 부족 | DataLemur/StrataScratch 해설 + LLM(Claude/GPT)에 쿼리 리뷰 요청으로 보완 |
+| 12월 면접 대비 집중도 부족 | Phase 4 (2026-12 말 ~ 2027-01 초)를 면접 준비 Phase 3(Section 3)과 통합 운영 |
 
 ---
 
