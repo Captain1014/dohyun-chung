@@ -173,13 +173,14 @@
 
 ---
 
-## 8. 이번 주 할 일 (2026-04-09 기준)
+## 8. 이번 주 할 일 (2026-04-18 기준)
 
-1. [ ] LeetCode SQL 50 마무리 (24문제 남음 → 4/13 일요일까지)
-2. [ ] Udemy SnowPro Core 강의 수강 중 — 이번 주 50% 목표
-3. [ ] Snowflake 무료 트라이얼 계정 생성 (아직 안 했다면)
-4. [ ] SnowPro Core 시험 일정 확인 (온라인 응시 가능 여부)
-5. [ ] LinkedIn Job Alert 설정: Snowflake Korea SE, Google Korea CE
+1. [ ] LeetCode SQL 50 나머지 19문제 중 **5문제** 풀기
+2. [ ] Udemy SnowPro Core 강의 등록 + 이번 주 **2시간 수강**
+3. [ ] Snowflake 무료 trial 계정 생성 + 로그인만 해두기
+4. [ ] StrataScratch 가입 + ID 10087 풀어보기 (30분, 감 잡기용)
+5. [ ] LinkedIn Job Alert: Snowflake Korea SE + Databricks Korea SE
+6. [ ] STAR 스토리 후보 3개 메모 (현 KissProducts 업무 중 RCA/위기복구/이해관계자 조율 케이스)
 
 ---
 
@@ -277,4 +278,79 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 
 ---
 
-*Updated: 2026-04-18 — 지원 시점 2027-01로 연기, SQL 분석 트랙 (Section 9) 추가, 지속가능한 3-5 hrs/week SQL 페이스*
+---
+
+## 10. 면접 준비 4대 역량 — 우선순위·리소스·타임라인 매핑
+
+**목적:** SE 면접을 통과하는 데 실제로 필요한 역량을 **중요도 가중치**로 정리하고, Section 3/9의 타임라인에 매핑해 어느 달에 무엇을 공부해야 하는지를 한 눈에 본다.
+
+### 10.1 SE 면접 역량 중요도 (Snowflake/Databricks SE 기준)
+
+| # | 역량 | 가중치 | 평가 방식 | 왜 이 비중인가 |
+|---|------|--------|-----------|----------------|
+| 1 | **SQL + Snowflake 제품지식** | **40%** | 라이브 SQL 코딩 + 15-min 데모 | SE 기술 검증의 1차 관문 — 여기서 막히면 이후 라운드 진입 불가 |
+| 2 | **Business Engineering (Soft Skill)** | **25%** | 행동 질문 + STAR + 모의 고객 응대 | SE의 본질은 "기술을 비즈니스 언어로" — 당신 이력서 강점과 직결 |
+| 3 | **System Design 기초** | **20%** | 화이트보드 아키텍처 설명 | 멀티테넌시/API/확장성 — 당신 이력서 강점, 방어 가능 |
+| 4 | **Troubleshooting / RCA** | **10%** | 사례 기반 질문 + 가상 장애 시나리오 | 이미 강함, 복습으로 충분 |
+| 5 | **Python / 자료구조** | **5%** | 드물게 가벼운 코딩 질문 | SE는 알고리즘 하드 안 나옴, 읽기 가능 수준이면 OK |
+
+### 10.2 역량별 리소스 (받은 리스트 필터링)
+
+**카테고리 1: Coding & Data (메인 SQL은 Section 9 참조)**
+- Python 기초 읽기: [Codecademy Learn Python 3](https://www.codecademy.com/) — **최대 10시간, 라이브 코딩용 아님**
+- 자료구조 개념만: [Programiz DSA](https://www.programiz.com/dsa) — Array / Hash / Stack / Queue만 (나머지 skip)
+- ❌ **NeetCode는 제외** — SE는 알고리즘 퍼즐 안 나옴, 시간 낭비
+
+**카테고리 2: System Design**
+- 핵심: [ByteByteGo](https://bytebytego.com/) — 멀티테넌시 챕터는 **필수** (당신 이력서 연결)
+- 보조: [Grokking the System Design Interview (Educative)](https://www.educative.io/) — LB/캐싱/복제
+- 스킵: AWS Architecture Center 심화 — SE는 데이터 엔지니어 아님, 고수준 이해로 충분
+
+**카테고리 3: Troubleshooting**
+- 방법론: [Google SRE Book — Troubleshooting 챕터](https://sre.google/sre-book/effective-troubleshooting/) — 3시간만 투자, 프레임워크만 흡수
+- 디버깅 사례: [Sentry Answers](https://sentry.io/answers/) — 본인 KissProducts 이슈 대입 → STAR로 변환
+- 기술문서 작성: [Pragmatic Engineer — Technical Design Docs](https://blog.pragmaticengineer.com/scaling-engineering-teams-design-docs/)
+
+**카테고리 4: Business Engineering**
+- **가장 중요**: [Exponent](https://www.tryexponent.com/) — SE 전용 트랙 존재, 모의 면접 녹화·복기
+- 글로벌 팀 조율: [HBR Leading Remote Teams](https://hbr.org/) — 당신의 인도/미국 경험 STAR화
+- 요구사항 명세화: [Product Plan PRD Guide](https://www.productplan.com/glossary/product-requirements-document/)
+
+### 10.3 월별 학습 매핑 (Section 3와 통합)
+
+| 월 | 메인 자격증/이벤트 | Python | SQL (Section 9) | System Design | Troubleshooting | Business Eng |
+|---|---|---|---|---|---|---|
+| **2026-04** | SnowPro Core 강의 시작 | - | Phase 0: SQL 50 마무리 | - | - | STAR 재료 수집 (현업무) |
+| **2026-05** | SnowPro Core 강의 완료 | Codecademy 기초 (주 1시간) | Phase 1 시작: StrataScratch | - | - | - |
+| **2026-06** | **🎯 SnowPro Core 합격** | - | Phase 1 진행 | - | - | - |
+| **2026-07** | AWS SAA 강의 시작 | - | Phase 1 진행 | ByteByteGo 주 1챕터 | - | - |
+| **2026-08** | AWS SAA 강의 중 | - | Phase 1 완료 | ByteByteGo 주 1챕터 | - | - |
+| **2026-09** | AWS SAA 모의고사 | - | Phase 2: BigQuery window | Grokking 주 1주제 | SRE Book 3시간 | - |
+| **2026-10** | **🎯 AWS SAA 합격** + 🔀 SQL 재평가 | - | Phase 2 완료 | - | Sentry Answers + STAR | Exponent 시작 (주 1시간) |
+| **2026-11** | 한국 이민 + GCP 속성 | - | Phase 3 (Track A or B) | - | - | Exponent 모의 + PRD guide |
+| **2026-12** | 한국 지사 적응 + 네트워킹 | - | Phase 3 완료 | - | - | Exponent 모의 3회 + 커피챗 5명 |
+| **2027-01** | **🎯 지원 시작** | - | Phase 4 (면접 실전) | - | - | 실제 인터뷰 |
+
+### 10.4 매달 학습 시간 예산 (회사일 병행 가정)
+
+| 월 | 자격증 | SQL (Section 9) | 기타 3개 역량 합계 | 총계 |
+|---|---|---|---|---|
+| 2026-04 ~ 06 (SnowPro 집중) | 6 hrs/wk | 3 hrs/wk | 1 hr/wk (Python 읽기) | **10 hrs/wk** |
+| 2026-07 ~ 10 (SAA 집중) | 5 hrs/wk | 3-4 hrs/wk | 2 hrs/wk (System Design) | **10-11 hrs/wk** |
+| 2026-11 ~ 12 (이민+면접준비) | 1-2 hrs/wk (GCP 속성) | 3 hrs/wk | 3-4 hrs/wk (Exponent + RCA + PRD) | **7-9 hrs/wk** (이사 부담 고려 축소) |
+
+### 10.5 역량별 산출물 체크리스트 (2027-01 지원 전까지)
+
+- [ ] **SQL**: StrataScratch 50+ 문제 + BigQuery 쿼리 포트폴리오 10+ 개 + Snowflake 시나리오 3-5개 (Section 9 산출물)
+- [ ] **Python**: Codecademy Learn Python 3 완주 — 읽기 수준
+- [ ] **System Design**: ByteByteGo 멀티테넌시 + LB/캐싱/복제 노트 1장
+- [ ] **Troubleshooting**: 본인 KissProducts 경험 기반 **RCA STAR 3개** (D-30 위기복구 포함)
+- [ ] **Business Engineering**:
+  - STAR 스토리 7개 (Snowflake SE + Google CE 버전 각각)
+  - Snowflake 15-min 데모 스크립트 1개
+  - 경쟁사 1-pager (Snowflake vs Databricks/BigQuery/Redshift)
+  - Exponent 모의 면접 3회 녹화 + 복기
+
+---
+
+*Updated: 2026-04-18 — Section 8 갱신 + Section 10 (4대 역량 프레임워크·월별 매핑·시간 예산) 추가. Section 9 SQL 트랙과 통합 운영.*
