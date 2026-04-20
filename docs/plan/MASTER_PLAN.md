@@ -11,7 +11,7 @@
 | 순위 | 회사 | 직군 | 매칭 근거 |
 | --- | --- | --- | --- |
 | **1** | **Snowflake Korea** | SE Associate + Account Engineer | PIM 프로젝트 맥락 이해 + SAP 통합 + 멀티테넌트 + bilingual. 한국 오피스 85→150명 확장 중 |
-| **2** | **Databricks Korea** | SE | 데이터 플랫폼 카테고리 대체재. Phase 3 Databricks DE 자격증으로 직접 매칭 |
+| **2** | **Databricks Korea** | SE | 데이터 플랫폼 카테고리 대체재. SQL + 멀티테넌트 + bilingual 공통 스킬로 지원 (Databricks DE 자격증은 optional post-hire) |
 | **3** | **Google Korea** | Customer Engineer | Google 브랜드 + 연봉 프리미엄. BigQuery 담당 시 data platform 연장선으로 포지셔닝 |
 | **4** | **Confluent Korea** | SE | Kafka/스트리밍, 데이터 인프라 카테고리 연장 |
 
@@ -60,21 +60,22 @@
 
 ## 2. 자격증 전략
 
-> **2026-04-18 업데이트:** 5-phase 구조로 재편. 자격증 순서 재배치 (AWS SAA 먼저, SnowPro 후반). Databricks DE Associate 추가로 2순위 타겟 직결 + 데이터 엔지니어링 갭 메움. Udemy는 **회사 지원** 활용.
+> **2026-04-18 최종 업데이트:** 5-phase 구조 확정. 자격증 2개 (AWS SAA → SnowPro Core) + 포트폴리오 프로젝트 + 이사 전용 Phase 4 (light). Databricks DE는 optional post-hire. Udemy는 **회사 지원**.
 
 | 순서 | 자격증 | 목표 시기 | 이유 |
 | --- | --- | --- | --- |
 | **1** | **AWS SAA** | 2026-07 중 | AWS/MS/기타 외국계 기본자격 + 클라우드 fundamentals. SAA가 가장 쉬운 cloud 진입점이므로 먼저 따서 자신감 확보 |
-| **2** | **Databricks Certified Data Engineer Associate** | 2026-09 중 | **2순위 타겟 Databricks Korea SE 직결**. Section 1 "큰 갭 — 데이터 엔지니어링" 정면 돌파. Snowflake + Databricks = 레이크하우스 경쟁 구도 이해 (면접 단골) |
-| **3** | **SnowPro Core** | 2026-11 초 | **1순위 타겟 Snowflake JD preferred**. AWS + Databricks 배경 위에서 Snowflake 심화가 제품 이해에 더 효과적 |
-| **4** | **GCP 기초 학습 (10-15시간, 자격증 X)** | 2026-12 | Google CE 면접 대비 — 자격증 불필요, GCP 핵심 서비스 + AWS 비교 수준이면 충분 ([출처](https://practice-interviews.ghost.io/understanding-the-customer-engineer-interview-process-at-google/)) |
+| **2** | **SnowPro Core** | 2026-09 중 | **Tier A 1순위 Snowflake Korea SE 직결**. Phase 3 (8-9월)에 집중 학습 + 개인 포트폴리오 프로젝트 병행 |
+| **3** | **GCP 기초 학습 (10-15시간, 자격증 X)** | 2026-12 | Tier A 3순위 Google CE 면접 대비 — 자격증 불필요, GCP 핵심 서비스 + AWS 비교 수준이면 충분 ([출처](https://practice-interviews.ghost.io/understanding-the-customer-engineer-interview-process-at-google/)) |
+
+**Optional (입사 후 2027 이후):** Databricks Certified Data Engineer Associate — Tier A 2순위 Databricks Korea SE 매칭 강화용. 현재 플랜에서 Phase 4는 이사 준비 전용이라 제외. 취업 후 여유 생기면 추가 취득 가능.
 
 
 ---
 
 ## 3. 5-Phase 학습 타임라인 (2026-04 ~ 2027-01)
 
-> **2026-04-18 업데이트:** 5-phase 구조로 재편. 각 Phase = 2개월 = 자격증 or 면접 목표 1개. 자격증 3개 (AWS SAA → Databricks DE → SnowPro Core) + 면접 준비 1구간 + SQL/DE/DB 보강 병행 (Section 9, 10 참조).
+> **2026-04-18 최종 업데이트:** 5-phase 구조 확정. Phase 1 SQL · Phase 2 AWS SAA · Phase 3 SnowPro Core + 포트폴리오 · Phase 4 이사 (light) · Phase 5 면접 준비 + 지원. SQL/DE/DB 보강은 Section 9, 10 참조.
 
 ### Phase 1: SQL 완전 마스터 (2026-04 ~ 2026-05, 8주)
 
@@ -98,37 +99,51 @@
 | 6월 1-3주 | Udemy SAA (Stéphane Maarek) 강의 완료 | **Use the Index, Luke!** (주 2h) | SAA 강의 100% |
 | 6월 4주 ~ 7월 2주 | SAA 모의고사 반복 + 약점 보강 | Use the Index, Luke! 완료 | 모의고사 70%+ |
 | 7월 3주 | **🎯 AWS SAA 시험 응시** | - | **AWS SAA 합격** |
-| 7월 4주 | 버퍼 + Phase 3 선행 학습 | SQL Performance Explained 시작 | Databricks 강의 미리 시작 |
+| 7월 4주 | 버퍼 + Phase 3 선행 학습 | SQL Performance Explained 시작 | SnowPro Core 강의 미리 시작 + dbt Fundamentals 등록 |
 
 **리소스:** Udemy Stéphane Maarek SAA (**회사 지원**) + [Use the Index, Luke!](https://use-the-index-luke.com/) (Free)  **시간:** 주 10-12시간
 
-### Phase 3: Databricks Certified Data Engineer Associate (2026-08 ~ 2026-09, 8주)
+### Phase 3: SnowPro Core + 포트폴리오 프로젝트 (2026-08 ~ 2026-09, 8주)
 
-**목표:** 🎯 Databricks DE Associate 합격 + 데이터 엔지니어링 갭 메우기
-
-| 기간 | 메인 학습 | 병행 (DE 보강) | 산출물 |
-| --- | --- | --- | --- |
-| 8월 1-2주 | Udemy Databricks DE 강의 (PySpark, Delta Lake 기초) | **Kleppmann DDIA Ch 1** (데이터 시스템 기초) | 강의 40% |
-| 8월 3-4주 | Databricks 핸즈온 (Community Edition) | Kleppmann Ch 3 (저장 엔진) | 강의 80% |
-| 9월 1-2주 | 모의고사 + 약점 보강 | Kleppmann Ch 4 (인코딩/스키마 진화) + SQL Performance Explained 완료 | 모의고사 70%+ |
-| 9월 3주 | **🎯 Databricks DE 시험 응시** | - | **Databricks DE 합격** |
-| 9월 4주 | 버퍼 + Kleppmann Ch 10 (배치 처리) | Phase 4 선행 | DDIA 핵심 챕터 완료 |
-
-**리소스:** Udemy Databricks DE Associate (**회사 지원**) + [Databricks Community Edition](https://community.cloud.databricks.com/) (Free) + [Kleppmann "Designing Data-Intensive Applications"](https://dataintensive.net/) + [SQL Performance Explained](https://sql-performance-explained.com/)  **시간:** 주 10-12시간
-
-### Phase 4: SnowPro Core + 포트폴리오 프로젝트 (2026-10 ~ 2026-11, 8주)
-
-**목표:** 🎯 SnowPro Core 합격 + dbt + Snowflake E2E 포트폴리오 + 한국 이사
+**목표:** 🎯 SnowPro Core 합격 + dbt + **Snowflake E2E 포트폴리오 프로젝트** (이력서 hands-on 갭 메움)
 
 | 기간 | 메인 학습 | 병행 | 산출물 |
 | --- | --- | --- | --- |
-| 10월 1-2주 | Udemy SnowPro Core 강의 + Snowflake trial 핸즈온 | **dbt Fundamentals** (8h) | 강의 50% + dbt 수료 |
-| 10월 3-4주 | 강의 완료 + Snowflake 심화 (Tasks, Streams, Snowpipe) | **개인 프로젝트** 설계 (public dataset) | 강의 100% |
-| 11월 1-2주 | 모의고사 + **🎯 시험 응시** | 개인 프로젝트 구축 (dbt + Snowflake) | **SnowPro Core 합격** |
-| 11월 3주 | 프로젝트 완성 + README + 아키텍처 다이어그램 | 이사 준비 | **GitHub 프로젝트 공개** |
-| 11월 말 | 🛫 **한국 이사** + LinkedIn 위치 "Seoul" 변경 | 한국 지사 출근 준비 | - |
+| 8월 1-2주 | Udemy SnowPro Core 강의 시작 + Snowflake trial 핸즈온 | **dbt Fundamentals** (8h) + Kleppmann DDIA Ch 1 | 강의 50% + dbt 수료 |
+| 8월 3-4주 | 강의 완료 + Snowflake 심화 (Tasks, Streams, Snowpipe, Time Travel, Zero-copy) | **개인 프로젝트 설계** (public dataset 선정: NYC taxi / GitHub events / Kaggle) | 강의 100% + 프로젝트 design doc |
+| 9월 1-2주 | 모의고사 + 약점 보강 | 프로젝트 구축 (raw → staging → marts with dbt) + Kleppmann Ch 3 | 모의고사 70%+ + 프로젝트 50% |
+| 9월 3주 | **🎯 SnowPro Core 시험 응시** | 프로젝트 분석 쿼리 (비즈니스 질문 5개) | **SnowPro Core 합격** |
+| 9월 4주 | 버퍼 | **프로젝트 완성** + README + 아키텍처 다이어그램 + LinkedIn 포스트 | **GitHub 프로젝트 공개** |
 
-**리소스:** Udemy SnowPro Core (**회사 지원**) + Snowflake trial + [dbt Fundamentals](https://learn.getdbt.com/) (Free) + BigQuery public dataset  **시간:** 주 10-12시간 (11월 4주는 이사로 감소)
+**핵심 산출물 (Snowflake hands-on 증거):**
+- GitHub: `github.com/[username]/snowflake-dbt-pipeline`
+- 아키텍처 다이어그램 (Excalidraw/Mermaid)
+- dbt DAG 스크린샷
+- 비즈니스 질문/SQL/답변 5개 문서화
+- LinkedIn 포스트로 현직자 네트워킹 시작
+
+**리소스:** Udemy SnowPro Core (**회사 지원**) + Snowflake 30일 trial + [dbt Fundamentals](https://learn.getdbt.com/) (Free) + BigQuery public dataset + [Kleppmann DDIA](https://dataintensive.net/) Ch 1,3  **시간:** 주 10-12시간
+
+### Phase 4: 이사 준비 (2026-10 ~ 2026-11, 8주) — Light Maintenance
+
+**목표:** 한국 이사 + 현 회사 한국 지사 전환 준비. **본격 학습은 중단**, 감각만 유지.
+
+| 기간 | 할 일 | 시간 |
+| --- | --- | --- |
+| 10월 1-2주 | 비자/짐/주거 정리 시작 + SQL 감각 유지 (StrataScratch 주 1문제) | 주 3h |
+| 10월 3-4주 | 포트폴리오 프로젝트 최종 refinement (Phase 3 완성품 README 다듬기) | 주 3-5h |
+| 11월 1-2주 | 이사 본격 준비 + **LinkedIn 현직자 메시지 시작** (2-3명 pre-컨택) | 주 3h |
+| 11월 3주 | 이사 + 한국 도착 | 공부 중단 |
+| 11월 말 | 🛫 **한국 도착** + LinkedIn 위치 "Seoul" 변경 + 한국 지사 출근 준비 | - |
+
+**현실 인정:** 이사는 체력/정신력 소모 큰 이벤트. 주 3-5h 이상 강요 안 함. 단 다음은 유지:
+- SQL 감각: StrataScratch Easy 주 1-2문제 (30분)
+- LinkedIn 활동: 주 1회 포스트/댓글 (한국 이직 준비 시그널링)
+- 포트폴리오 프로젝트 README 업데이트 (틈틈이)
+
+**리스크 관리:** 이 구간에 Phase 3 시험 못 본 경우 → 10월 1-2주에 재응시 가능 (버퍼 활용)
+
+**리소스:** 이미 확보된 자료 복습만. 신규 학습 ❌
 
 ### Phase 5: 면접 준비 + 지원 (2026-12 ~ 2027-01, 8주)
 
@@ -169,12 +184,14 @@
 2026-04-30 ── LeetCode SQL 50 완료 (Phase 1)
 2026-05-31 ── 분석형 SQL 50+ 문제 + 쿼리 포트폴리오 3개 (Phase 1 완료)
 2026-07 중순 ── 🎯 AWS SAA 합격 (Phase 2 완료)
-2026-09 중순 ── 🎯 Databricks DE Associate 합격 (Phase 3 완료)
-2026-11 초 ── 🎯 SnowPro Core 합격 (Phase 4 자격증)
-2026-11 중순 ── dbt + Snowflake 포트폴리오 프로젝트 공개 (Phase 4)
+2026-09 중순 ── 🎯 SnowPro Core 합격 (Phase 3 완료)
+2026-09 말 ── 🌟 dbt + Snowflake E2E 포트폴리오 프로젝트 GitHub 공개 (Phase 3)
+2026-10 ~ 11 ── Phase 4 이사 준비 (light maintenance, 주 3-5h)
 2026-11 말 ── 🛫 한국 이민 + 한국 지사 근무 시작
-2026-12 말 ── 데모 시나리오, STAR 7개, 경쟁사 분석, 이력서 완료 (Phase 5)
-2027-01-15 ── 🎯 지원 시작 (Snowflake / Databricks / Confluent / MongoDB / Google CE)
+2026-12 말 ── 데모 시나리오, STAR 7개, 경쟁사 분석, 이력서 완료, GCP 속성 학습 (Phase 5)
+2027-01 1주차 ── 🎯 Tier A 동시 지원 (Snowflake / Databricks / Google CE / Confluent)
+2027-01 2주차 ── Tier B 지원 (MongoDB / Datadog / AWS TAM)
+2027-03~04 ── 오퍼 단계
 2027-04 ── 현 회사 보너스 수령 후 퇴사
 2027-05 이후 ── 신규 회사 입사
 ```
@@ -186,12 +203,12 @@
 | 리스크 | 완화 |
 | --- | --- |
 | 2027-01 시점 Snowflake/Databricks Korea 헤드카운트 미개방 | **2026-12 현직자 커피챗**으로 Q1 채용 계획 간접 확인 + 복수 회사 동시 지원 (Confluent, MongoDB, Datadog TSE, AWS TAM 등) |
-| Databricks DE Associate 2달 안에 실패 | Phase 4 (10월)에 1주 버퍼 활용 재응시. SnowPro Core는 그대로 진행 |
-| SAA 2달 안에 실패 | Phase 3 초반에 재응시 허용. Databricks 강의와 1-2주 병행 가능 |
+| SnowPro Core 2달 안에 실패 | Phase 4 (10월) 버퍼 활용 재응시. 이사 준비와 병행 부담 있으므로 9월 내 합격이 이상적 |
+| SAA 2달 안에 실패 | Phase 3 초반에 재응시 허용. SnowPro 강의와 1-2주 병행 가능 |
 | 현 회사가 인터뷰 과정 인지 → 보너스 취소 위험 | LinkedIn "Open to Work" 끄기, "Recruiters only" 모드. 인터뷰 연차 활용. 2027-04 보너스 전 퇴사 언급 금지 |
 | 설날(2027-02-17) 채용 슬로우다운 | 1월 둘째주까지 서류 통과 + 1차 인터뷰 완료 목표. 설날 이후 온사이트/오퍼 단계로 이동 |
 | **Snowflake 직접 hands-on 경험 제한적** (PIM 프로젝트는 리드였으나 Snowflake deep 작업은 다른 엔지니어 담당) | **Phase 4 (10-11월) 개인 dbt + Snowflake E2E 포트폴리오 프로젝트**로 실제 hands-on 증거 확보. 2026-12에 이력서 정확히 수정. 면접은 정직 프레이밍 + "학습 중 + 포트폴리오" 포지셔닝. |
-| Snowflake 기술 깊이 부족 (현직자 대비) | SnowPro + Databricks + dbt 포트폴리오 3중 증거 + 영어/고객 대면으로 차별화 |
+| Snowflake 기술 깊이 부족 (현직자 대비) | SnowPro Core + **개인 dbt + Snowflake E2E 포트폴리오** 2중 증거 + 영어/고객 대면으로 차별화 |
 | 인터뷰 60일 → 4월 보너스 타이밍 빠듯 | 1월 중순 지원 → 3월 말 오퍼 목표. 못 맞추면 (A) 보너스 포기 (B) 한국 지사 연장 검토 |
 
 
@@ -368,20 +385,20 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 
 ### 10.3 월별 학습 매핑 (Section 3 5-phase 구조와 통합)
 
-> 2026-04-18 업데이트: 자격증 순서 재편 반영 (AWS SAA → Databricks DE → SnowPro Core). DB/SQL/DE 보강은 10.6 참조.
+> 2026-04-18 업데이트: 자격증 2개 (AWS SAA → SnowPro Core) + Phase 3에 포트폴리오 + Phase 4 이사 light 구간. DB/SQL/DE 보강은 10.6 참조.
 
 | 월 | Phase (Section 3) | SQL (Section 9) | DB/SQL/DE 보강 (10.6) | System Design | Troubleshooting | Business Eng |
 | --- | --- | --- | --- | --- | --- | --- |
 | **2026-04** | Phase 1: SQL 마스터 | SQL 50 마무리 | - | - | - | STAR 재료 수집 (현업무) |
 | **2026-05** | Phase 1 (SQL) | StrataScratch + DataLemur | Python 기초 읽기 (주 1h) | - | - | - |
-| **2026-06** | Phase 2: AWS SAA | Phase 1 완료 + 유지 | **Use the Index, Luke!** (주 2h) | - | - | - |
+| **2026-06** | Phase 2: AWS SAA | Phase 1 유지 | **Use the Index, Luke!** (주 2h) | - | - | - |
 | **2026-07** | Phase 2: **🎯 AWS SAA 합격** | SQL 유지 | Use the Index 완료 | ByteByteGo 시작 | - | - |
-| **2026-08** | Phase 3: Databricks DE | SQL 유지 | **Kleppmann DDIA Ch 1,3** + SQL Performance Explained | ByteByteGo 주 1챕터 | - | - |
-| **2026-09** | Phase 3: **🎯 Databricks DE 합격** | Phase 2: BigQuery window | Kleppmann Ch 4, 10 | Grokking 주 1주제 | SRE Book 3h | - |
-| **2026-10** | Phase 4: SnowPro Core + dbt + 포트폴리오 | Phase 2 완료 + 🔀 재평가 | **dbt Fundamentals** + 프로젝트 | - | Sentry + STAR | Exponent 시작 |
-| **2026-11** | Phase 4: **🎯 SnowPro Core 합격** + 한국 이사 | Phase 3 (Track A or B) | 프로젝트 완성 + GitHub 공개 | - | - | Exponent 모의 |
-| **2026-12** | Phase 5: 면접 준비 + GCP 속성 | Phase 3 완료 | - | - | - | Exponent 3회 + 커피챗 5명 |
-| **2027-01** | Phase 5: **🎯 지원 시작** | Phase 4 (면접 실전) | - | - | - | 실제 인터뷰 |
+| **2026-08** | Phase 3: SnowPro Core + 포트폴리오 | Phase 1 활용 (BigQuery 실습) | **dbt Fundamentals + Kleppmann Ch 1,3** | ByteByteGo 주 1챕터 | - | - |
+| **2026-09** | Phase 3: **🎯 SnowPro Core 합격 + 🌟 포트폴리오 공개** | Phase 2 진행 | 프로젝트에 Kleppmann 개념 적용 | Grokking 주 1주제 | SRE Book 3h | STAR 중간 정리 |
+| **2026-10** | Phase 4: **이사 준비** (light) | StrataScratch 주 1-2 | - | - | - | LinkedIn 사전 컨택 |
+| **2026-11** | Phase 4: **🛫 한국 이민** | 감각 유지만 | - | - | - | LinkedIn 위치 변경 |
+| **2026-12** | Phase 5: 면접 준비 + GCP 속성 | Phase 3 (Track A or B) | - | - | Sentry + STAR | Exponent 시작 + 커피챗 |
+| **2027-01** | Phase 5: **🎯 Tier A/B 지원** | Phase 4 (면접 실전) | - | - | - | Exponent 3회 + 실제 인터뷰 |
 
 ### 10.4 매달 학습 시간 예산 (회사일 병행 가정)
 
@@ -389,9 +406,9 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 | --- | --- | --- | --- | --- |
 | 2026-04 ~ 05 (Phase 1 SQL 집중) | - | 8-10 hrs/wk | STAR 메모 주 1h | **9-11 hrs/wk** |
 | 2026-06 ~ 07 (Phase 2 AWS SAA) | 7-8 hrs/wk | 2-3 hrs/wk (유지) | Use the Index 2h + ByteByteGo 1h | **12-14 hrs/wk** |
-| 2026-08 ~ 09 (Phase 3 Databricks) | 7-8 hrs/wk | 2-3 hrs/wk | Kleppmann + Grokking 3h | **12-14 hrs/wk** |
-| 2026-10 ~ 11 (Phase 4 SnowPro + 프로젝트) | 6-7 hrs/wk | 2-3 hrs/wk | dbt + 프로젝트 3h + Exponent 1h | **12-14 hrs/wk** |
-| 2026-12 ~ 2027-01 (Phase 5 면접) | 1-2 hrs/wk (GCP 속성) | 3 hrs/wk (Phase 3/4) | Exponent + 커피챗 + 데모 4h | **8-9 hrs/wk** (이사 부담) |
+| 2026-08 ~ 09 (Phase 3 SnowPro + 포트폴리오) | 6-7 hrs/wk | 2 hrs/wk | dbt 2h + 프로젝트 3h + Kleppmann 1h | **13-15 hrs/wk** (8-9월 피크) |
+| **2026-10 ~ 11 (Phase 4 이사)** | - | 1-2 hrs/wk (감각만) | LinkedIn 1h | **3-5 hrs/wk** (현실 반영) |
+| 2026-12 ~ 2027-01 (Phase 5 면접) | 1-2 hrs/wk (GCP 속성) | 3 hrs/wk | Exponent + 커피챗 + 데모 4h | **8-9 hrs/wk** |
 
 
 ### 10.5 역량별 산출물 체크리스트 (2027-01 지원 전까지)
@@ -408,8 +425,8 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 - **DB/SQL 전문성 + 데이터 엔지니어링** (Section 10.6 참조):
   - Use the Index, Luke! 완독 + EXPLAIN 읽기 가능
   - Kleppmann DDIA 핵심 4개 챕터 (1, 3, 4, 10) 완독
-  - **dbt + Snowflake E2E 포트폴리오 프로젝트** GitHub 공개
-  - Databricks DE Associate 자격증
+  - **dbt + Snowflake E2E 포트폴리오 프로젝트** GitHub 공개 (Phase 3 산출물)
+  - ~~Databricks DE Associate 자격증~~ → Optional post-hire (2027년 이후)
 
 ---
 
@@ -446,7 +463,7 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 | --- | --- | --- | --- | --- |
 | [Kleppmann "Designing Data-Intensive Applications"](https://dataintensive.net/) (책) | $40 | 30-40시간 | **데이터 엔지니어 바이블** — Ch 1, 3, 4, 10만 읽어도 핵심 커버 | Phase 3 (8-9월) 병행 |
 | [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) (DataTalks.Club) | Free | 선택적 | 필요 섹션만 발췌 (ETL, 데이터 웨어하우스, 워크플로우) | Phase 3 보조 |
-| Databricks DE Associate 공식 교재 | 자격증에 포함 | 40시간 | 실전 Spark + Delta Lake + 배치/스트리밍 | Phase 3 메인 (자격증) |
+| ~~Databricks DE Associate 교재~~ | - | - | Optional post-hire (2027 이후) | - |
 
 **핵심 챕터 가이드 (Kleppmann DDIA):**
 
@@ -489,4 +506,4 @@ Phase 2 (BigQuery Window/CTE 실전) 종료 시점에 **의도적인 재평가**
 
 ---
 
-*Updated: 2026-04-18 — 5-Phase 구조 재편 (AWS SAA → Databricks DE → SnowPro Core), Section 10.6 DB/SQL/DE 보강 플랜 추가, Section 3/5/6/8 일괄 갱신.*
+*Updated: 2026-04-18 — **최종 확정**: 5-Phase 구조 (Phase 1 SQL · Phase 2 AWS SAA · Phase 3 SnowPro Core + 포트폴리오 · **Phase 4 이사 준비 (light)** · Phase 5 면접 준비 + 지원). Databricks DE는 optional post-hire. Tier A/B/C 병렬 지원 전략.*
