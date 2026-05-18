@@ -16,19 +16,11 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: "Front-end Engineer & Product Manager",
+    title: "Software Engineer",
     company: "24/7 Teach",
     dateRange: "May 2023 — Apr 2024",
     description: [
-      "Led product and front-end for an AI-powered K-12 platform serving 3,000+ students; served as the technical liaison between educators, students, and the engineering team.",
-    ],
-  },
-  {
-    title: "Front-end Engineer Intern",
-    company: "SkyIT Services",
-    dateRange: "Jan 2023 — Apr 2023",
-    description: [
-      "Built client-facing inventory management and real-time shipment tracking for a B2B logistics platform.",
+      "Served as sole technical liaison between 3,000+ end users (educators, students) and engineering — translated classroom pain points into sprint-ready specs and shipped targeted improvements within 2-week cycles.",
     ],
   },
 ];
@@ -48,10 +40,6 @@ export const projects: ProjectItem[] = [
     slug: "krs-tpm-case-study",
   },
   {
-    title: "Product Information Management (PIM)",
-    description: "Led development of a centralized product data platform using AWS and Snowflake — owning end-to-end engineering, employee onboarding, training, and ongoing technical support.",
-  },
-  {
     title: "Naomi AI (24/7 Teach)",
     description: "Technical liaison between 3,000+ student/teacher users and the engineering team — gathering feedback, triaging issues, and driving product improvements for an AI-powered K-12 learning platform.",
   },
@@ -62,25 +50,26 @@ export const skillsByCategory: Record<string, string[]> = {
   "Cloud & Data": [
     "AWS",
     "Snowflake",
+    "SAP Integration",
     "REST API Design",
     "SQL",
-    "Microservices Architecture",
     "Data Pipelines",
   ],
   "Technical": [
-    "Python",
-    "JavaScript/TypeScript",
-    "React",
+    "Full-stack & App Development",
     "HTTP/API Troubleshooting",
-    "Web Application Architecture",
+    "Web Architecture",
+    "Python",
+    "JavaScript / TypeScript",
+    "React",
   ],
   "Customer-facing": [
     "Technical Troubleshooting",
     "Root-Cause Analysis",
     "Solution Design",
-    "Technical Presentations",
+    "Integration Consulting",
     "Customer Onboarding",
-    "Cross-border Stakeholder Management",
+    "Stakeholder Management",
   ],
   "Product & Process": [
     "Agile / Scrum",

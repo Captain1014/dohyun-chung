@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { AboutHero } from "@/components/AboutHero";
 import { HeroReveal } from "@/components/HeroReveal";
 
@@ -20,24 +19,6 @@ const skills = {
     { name: "Figure Skating ⛸️", note: "someday" },
   ],
 };
-
-const languages = [
-  { name: "Daegu Korean", note: "home dialect" },
-  { name: "Seoul Korean", note: "standard" },
-  { name: "English", note: "" },
-  { name: "Mandarin", note: "" },
-  { name: "Japanese", note: "" },
-  { name: "Spanish", note: "" },
-  { name: "Greek", note: "" },
-  { name: "Albanian", note: "a little" },
-];
-
-const countries = [
-  "South Korea 🇰🇷 🏠", "United States 🇺🇸", "Guam 🇬🇺",
-  "Japan 🇯🇵", "China 🇨🇳", "Hong Kong 🇭🇰", "Taiwan 🇹🇼",
-  "Vietnam 🇻🇳", "Italy 🇮🇹", "Greece 🇬🇷",
-  "Macedonia 🇲🇰", "Albania 🇦🇱",
-];
 
 
 export default function AboutPage() {
@@ -61,10 +42,22 @@ export default function AboutPage() {
           </p>
           <p className="text-lg leading-relaxed mb-5">
             For a long time, that made me feel like I wasn&apos;t truly talented at anything —
-            just comfortably <em>mid</em> at everything. But I&apos;ve come to love it. Being
-            genuinely curious about many different fields is a superpower, and it&apos;s a big part
-            of what makes me a good{" "}
-            <Link href="/work" className="underline hover:no-underline">Solutions Engineer</Link>.
+            just comfortably <em>mid</em> at everything. But I&apos;ve come to love it.
+          </p>
+          <p className="text-lg leading-relaxed mb-5">
+            I&apos;m a natural leader — not in the &ldquo;I&apos;ll do everything myself&rdquo; way, but in the way
+            that I know how to get the right people moving in the right direction. I boom when
+            I&apos;m leading. Giving people ownership, making things click into place, watching a
+            team actually work — that&apos;s where I feel most alive.
+          </p>
+          <p className="text-lg leading-relaxed mb-5">
+            There&apos;s a Korean saying I&apos;ve lived by without ever being taught it: 강강약약. Strong
+            with the strong, gentle with the gentle. When my little sister was born, I apparently
+            just knew. I used to pick up snails and worms off the street because they were drying
+            out and dying and I couldn&apos;t walk past them. Before I moved to New York, I sat down
+            with my 80-year-old grandmother and taught her how to video call, so she&apos;d always
+            have a way to reach me. I didn&apos;t think of any of this as unusual until someone
+            pointed it out. That&apos;s just how I&apos;m wired.
           </p>
         </section>
       </HeroReveal>
@@ -108,43 +101,6 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
-        </section>
-      </HeroReveal>
-
-      {/* Languages */}
-      <HeroReveal className="mb-16">
-        <section>
-          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Languages</h2>
-          <p className="text-xs text-[var(--muted)] mb-4">most fluent → least</p>
-          <ol className="space-y-2">
-            {languages.map(({ name, note }, i) => (
-              <li key={name} className="flex items-baseline gap-3">
-                <span className="text-xs font-mono text-[var(--muted)] w-4 shrink-0">{i + 1}</span>
-                <span className="text-sm">{name}</span>
-                {note && <span className="text-xs text-[var(--muted)]">— {note}</span>}
-              </li>
-            ))}
-          </ol>
-        </section>
-      </HeroReveal>
-
-      {/* Countries */}
-      <HeroReveal className="mb-16">
-        <section>
-          <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Countries Visited</h2>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {countries.map((c) => (
-              <span key={c} className="px-3 py-1.5 rounded-full border border-[var(--border)] text-sm opacity-80">
-                {c}
-              </span>
-            ))}
-          </div>
-          <p className="text-sm text-[var(--muted)] mb-6">
-            I love going back to places I&apos;ve already been — I miss the good times everywhere I&apos;ve gone.
-          </p>
-          <p className="text-xs text-[var(--muted)]">
-            One place I&apos;ll probably never get to: North Korea 🇰🇵 — I&apos;ve watched a lot of documentaries about it. My heart goes out to the people there.
-          </p>
         </section>
       </HeroReveal>
 

@@ -3,12 +3,10 @@
 import { useState, useEffect } from "react";
 
 const ROLES = [
-  "Solutions Engineer",
-  "Model",
+  "Software Engineer",
+  "Technical Consultant",
+  "Musician",
   "Dancer",
-  "Drummer",
-  "Pianist",
-  "DJ",
 ];
 
 const DURATION_MS = 2800;

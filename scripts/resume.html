@@ -9,104 +9,139 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  @page { size: letter; margin: 0; }
+
+  :root {
+    --accent: #1a56db;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --light: #f3f4f6;
+    --border: #e5e7eb;
+  }
+
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: #1a1a1a;
-    line-height: 1.5;
-    font-size: 11px;
-    padding: 32px 48px;
+    color: var(--text);
+    line-height: 1.4;
+    font-size: 10.5px;
+    padding: 28px 42px;
     max-width: 794px;
     margin: 0 auto;
+    background: #fff;
+  }
+
+  /* ── Header ── */
+  .header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
 
   h1 {
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 4px;
+    color: var(--text);
+    margin-bottom: 2px;
   }
 
   .subtitle {
-    font-size: 12.5px;
-    color: #555;
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 500;
     margin-bottom: 4px;
   }
 
   .contact {
-    font-size: 11px;
-    color: #555;
-    margin-bottom: 16px;
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .contact a {
-    color: #555;
-    text-decoration: none;
-  }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact a:hover { color: var(--accent); }
+  .contact .sep { color: #d1d5db; }
 
-  .contact .sep {
-    margin: 0 6px;
-    color: #ccc;
-  }
-
+  /* ── Section titles ── */
   .section-title {
-    font-size: 9.5px;
-    font-weight: 600;
+    font-size: 8.5px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #888;
-    border-bottom: 1px solid #e5e5e5;
+    letter-spacing: 1.8px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
     padding-bottom: 3px;
-    margin-bottom: 10px;
-    margin-top: 14px;
+    margin-bottom: 8px;
+    margin-top: 11px;
   }
 
+  /* ── Summary ── */
   .summary {
-    font-size: 11px;
-    line-height: 1.55;
-    color: #333;
-    margin-bottom: 4px;
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: #374151;
+    margin-bottom: 0;
   }
 
-  .job {
-    margin-bottom: 12px;
-  }
+  /* ── Jobs ── */
+  .job { margin-bottom: 9px; }
 
   .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
   }
 
   .job-title {
-    font-size: 13px;
+    font-size: 11.5px;
     font-weight: 700;
+    color: var(--text);
   }
 
   .job-date {
-    font-size: 11px;
-    color: #888;
+    font-size: 10px;
+    color: var(--muted);
     white-space: nowrap;
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
   }
 
   .job-company {
-    font-size: 11px;
-    color: #555;
-    margin-bottom: 6px;
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 5px;
   }
 
   .job ul {
-    list-style: disc;
-    padding-left: 16px;
+    list-style: none;
+    padding-left: 0;
   }
 
   .job li {
-    font-size: 11px;
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 4px;
+    font-size: 10.5px;
+    line-height: 1.42;
+    color: #374151;
+    margin-bottom: 2.5px;
+    padding-left: 12px;
+    position: relative;
   }
 
+  .job li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8px;
+    top: 1px;
+  }
+
+  /* ── Education ── */
   .edu-header {
     display: flex;
     justify-content: space-between;
@@ -114,43 +149,59 @@
   }
 
   .edu-degree {
-    font-size: 13px;
+    font-size: 11.5px;
     font-weight: 700;
   }
 
   .edu-school {
-    font-size: 11px;
-    color: #555;
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
   }
 
   .edu-date {
-    font-size: 11px;
-    color: #888;
+    font-size: 10px;
+    color: var(--muted);
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
   }
 
+  /* ── Skills ── */
   .skills {
-    font-size: 11px;
-    line-height: 1.6;
-    color: #333;
+    font-size: 10.5px;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .skills .row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
   }
 
   .skills .cat {
-    color: #888;
-    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 10px;
+    min-width: 110px;
+    flex-shrink: 0;
   }
 </style>
 </head>
 <body>
 
-<h1>Dohyun Chung</h1>
-<div class="subtitle">Solutions Engineer &middot; Cloud &amp; Enterprise SaaS &middot; Bilingual KR/EN</div>
-<div class="contact">
-  leahchung99@gmail.com<span class="sep">|</span>Seoul, South Korea &middot; Open to Remote<span class="sep">|</span><a href="https://dohyunchung.com">Portfolio</a><span class="sep">|</span><a href="https://linkedin.com/in/dohyunchung">LinkedIn</a>
+<div class="header">
+  <h1>Dohyun Chung</h1>
+  <div class="subtitle">Solutions Engineer &middot; Enterprise Integration &amp; Automation &middot; Bilingual KR/EN</div>
+  <div class="contact">
+    leahchung99@gmail.com<span class="sep">&nbsp;|&nbsp;</span>New York, NY &middot; Relocating to Seoul<span class="sep">&nbsp;|&nbsp;</span><a href="https://dohyun-chung.vercel.app">Portfolio</a><span class="sep">&nbsp;|&nbsp;</span><a href="https://linkedin.com/in/dohyunchung">LinkedIn</a>
+  </div>
 </div>
 
 <div class="section-title">Summary</div>
 <p class="summary">
-  Bilingual (Korean/English) technical professional with 3+ years of customer-facing engineering across global teams. Serve as the primary technical point of contact for 300+ enterprise platform users &mdash; diagnosing production issues, driving root-cause resolution with cross-border development teams, and translating complex technical constraints into business-ready solutions. Built and launched an enterprise SaaS platform (AWS, Snowflake) from zero to production while managing four stakeholder groups across India, New York, and Korea. Passionate about helping customers adopt technology and achieve their business goals.
+  Bilingual (Korean/English) integration specialist with 3+ years on the customer side of enterprise system projects &mdash; connecting SAP, cloud platforms, and business applications while supporting 300+ users across the US and Europe. Experienced in turning complex technical problems into clear solutions that business teams can actually use. Driven to be the trusted technical advisor that helps customers adopt new platforms quickly and get real value from day one.
 </p>
 
 <div class="section-title">Experience</div>
@@ -160,41 +211,29 @@
     <span class="job-title">Software Engineer &amp; Technical Customer Lead</span>
     <span class="job-date">Apr 2024 &ndash; Present</span>
   </div>
-  <div class="job-company">Kiss Products, Inc. &mdash; New York, NY</div>
+  <div class="job-company">Kiss Products, Inc. &mdash; New York, NY <span style="color:#9ca3af;font-weight:400;">&middot; #1 Nail Brand in the US &middot; Global beauty leader in 100+ countries</span></div>
   <ul>
-    <li>Serve as the primary technical point of contact for 300+ retail platform users &mdash; fielding daily issue reports from field sales teams, diagnosing SAP-to-platform data sync failures and order processing errors, and driving resolution through root-cause analysis and cross-team coordination.</li>
-    <li>Lead a Product Information Management (PIM) initiative using AWS and Snowflake to centralize company-wide product data into a single platform; own end-to-end development and serve as the main liaison for employee onboarding, training, and ongoing support.</li>
-    <li>Designed multi-tenant architecture for an Enterprise Retail OS and led launch from zero to production; reduced partner onboarding from days to &lt;30 minutes via automated API provisioning.</li>
-    <li>Bridged four conflicting stakeholder groups (India vendor dev, India vendor PM, US business team, in-house engineering) &mdash; translated business requirements into technical specs and brokered phased delivery plans that unblocked development.</li>
-    <li>Designed and implemented an Atomic Transaction Flow (Order &rarr; Receiving &rarr; Invoice &rarr; Inventory); achieved 0% cross-entity data inconsistency and 80% reduction in warehouse task latency.</li>
-    <li>Recovered a D-30 launch crisis by auditing architectural deviations; introduced Technical Design Doc gates and quality review processes, resulting in zero repeat incidents post-launch.</li>
+    <li>Serve as the primary technical contact for 300+ salespeople and retail store operators across the US and Europe &mdash; triaging daily issue reports across two live platforms (KISS Sales Platform and KRS POS), owning end-to-end resolution, and turning recurring field feedback into shipped improvements.</li>
+    <li>Traced and fixed a 10-year-old bug in the order processing and SAP data sync pipeline &mdash; cleared 5,000+ stuck records, resolved persistent tracking number discrepancies, and cut bulk processing time from 120 seconds to 5 seconds.</li>
+    <li>Designed and launched a platform that lets multiple companies share the same infrastructure while keeping their data completely separate; cut new partner onboarding from several days to under 30 minutes.</li>
+    <li>Broke a weeks-long standoff between 4 teams (vendor dev, vendor PM, US business, in-house engineering) by designing a delivery plan that worked for everyone &mdash; shipped on time and cut warehouse processing time by 80%.</li>
+    <li>Caught a critical security issue 30 days before launch &mdash; one company&rsquo;s data was leaking into another&rsquo;s. Fixed it on time and introduced team review checkpoints that prevented any similar incident from happening again.</li>
   </ul>
 </div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">Front-end Engineer &amp; Product Manager</span>
+    <span class="job-title">Software Engineer</span>
     <span class="job-date">May 2023 &ndash; Apr 2024</span>
   </div>
   <div class="job-company">24/7 Teach</div>
   <ul>
-    <li>Led front-end development and product strategy for Naomi AI, an AI-powered K-12 learning platform serving 3,000+ students; gathered feedback directly from teachers and curriculum designers to drive feature improvements.</li>
-    <li>Served as technical liaison between end users (educators, students) and the engineering team &mdash; translating user-reported issues and feature requests into prioritized development tasks.</li>
-    <li>Partnered with CEO and Marketing to analyze conversion data; influenced the product roadmap to align development with user retention and adoption goals.</li>
+    <li>Served as sole technical liaison between 3,000+ end users (educators, students) and engineering &mdash; translated classroom pain points into sprint-ready specs and shipped targeted improvements within 2-week cycles.</li>
+    <li>Led front-end development and product roadmap for Naomi AI, an AI-powered K-12 platform; partnered with CEO to analyze conversion data and realigned feature priorities around user retention.</li>
+    <li>Conducted direct user interviews with teachers and curriculum designers; turned qualitative feedback into measurable product improvements adopted by the full user base.</li>
   </ul>
 </div>
 
-<div class="job">
-  <div class="job-header">
-    <span class="job-title">Front-end Engineer Intern</span>
-    <span class="job-date">Jan 2023 &ndash; Apr 2023</span>
-  </div>
-  <div class="job-company">SkyIT Services</div>
-  <ul>
-    <li>Built client-facing inventory management and real-time shipment tracking features for a B2B logistics platform in React.</li>
-    <li>Defined API consumption patterns with backend engineers; delivered key dashboard on schedule under Agile sprints.</li>
-  </ul>
-</div>
 
 <div class="section-title">Education</div>
 <div class="edu-header">
@@ -207,12 +246,12 @@
 
 <div class="section-title">Skills</div>
 <div class="skills">
-  <div><span class="cat">Languages</span> Korean (Native) &middot; English (Fluent)</div>
-  <div><span class="cat">Cloud &amp; Data</span> AWS &middot; Snowflake &middot; REST API Design &middot; SQL &middot; Microservices Architecture &middot; SAP Integration &middot; Data Pipelines</div>
-  <div><span class="cat">Technical</span> Python &middot; JavaScript/TypeScript &middot; React &middot; HTTP/API Troubleshooting &middot; Web Application Architecture</div>
-  <div><span class="cat">Customer-facing</span> Technical Troubleshooting &middot; Root-Cause Analysis &middot; Solution Design &middot; Technical Presentations &middot; Customer Onboarding &middot; Cross-border Stakeholder Management</div>
-  <div><span class="cat">Product &amp; Process</span> Agile / Scrum &middot; PRD Writing &middot; Launch Readiness &middot; Vendor Management</div>
-  <div><span class="cat">Tools</span> Jira &middot; Figma &middot; Notion &middot; Git</div>
+  <div class="row"><span class="cat">Languages</span> Korean (Native) &middot; English (Fluent)</div>
+  <div class="row"><span class="cat">Cloud &amp; Data</span> AWS &middot; Snowflake &middot; SAP Integration &middot; REST API Design &middot; SQL &middot; Data Pipelines</div>
+  <div class="row"><span class="cat">Technical</span> Full-stack &amp; app development &middot; HTTP/API Troubleshooting &middot; Web Architecture (Python, JavaScript/TypeScript, React)</div>
+  <div class="row"><span class="cat">Customer-facing</span> Technical Troubleshooting &middot; Root-Cause Analysis &middot; Solution Design &middot; Customer Onboarding &middot; Stakeholder Management</div>
+  <div class="row"><span class="cat">Product &amp; Process</span> Agile / Scrum &middot; PRD Writing &middot; Launch Readiness &middot; Vendor Management</div>
+  <div class="row"><span class="cat">Tools</span> Jira &middot; Figma &middot; Notion &middot; Git</div>
 </div>
 
 </body>
