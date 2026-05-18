@@ -1,4 +1,17 @@
+"use client";
+
+import { useState } from "react";
+
 export function SocialIcons() {
+  const [copied, setCopied] = useState(false);
+
+  function copyEmail() {
+    navigator.clipboard.writeText("leahchung99@gmail.com").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
+
   return (
     <ul className="flex items-center gap-4">
       <li>
@@ -28,16 +41,21 @@ export function SocialIcons() {
         </a>
       </li>
       <li>
-        <a
-          href="mailto:leahchung99@gmail.com"
-          className="text-[var(--foreground)] hover:opacity-70 transition-opacity"
-          aria-label="Email"
+        <button
+          onClick={copyEmail}
+          className="relative text-[var(--foreground)] hover:opacity-70 transition-opacity cursor-pointer"
+          aria-label={copied ? "Copied!" : "Copy email"}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
             <rect x="2" y="4" width="20" height="16" rx="2" />
             <path d="M2 7l10 7 10-7" />
           </svg>
-        </a>
+          {copied && (
+            <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs bg-[var(--foreground)] text-[var(--background)] px-2 py-0.5 rounded whitespace-nowrap">
+              Copied!
+            </span>
+          )}
+        </button>
       </li>
     </ul>
   );
