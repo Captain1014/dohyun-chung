@@ -1,5 +1,6 @@
 import { AboutHero } from "@/components/AboutHero";
 import { HeroReveal } from "@/components/HeroReveal";
+import { CopyEmailButton } from "@/components/CopyEmailButton";
 
 const skills = {
   confident: [
@@ -45,12 +46,6 @@ export default function AboutPage() {
             just comfortably <em>mid</em> at everything. But I&apos;ve come to love it.
           </p>
           <p className="text-lg leading-relaxed mb-5">
-            I&apos;m a natural leader — not in the &ldquo;I&apos;ll do everything myself&rdquo; way, but in the way
-            that I know how to get the right people moving in the right direction. I boom when
-            I&apos;m leading. Giving people ownership, making things click into place, watching a
-            team actually work — that&apos;s where I feel most alive.
-          </p>
-          <p className="text-lg leading-relaxed mb-5">
             There&apos;s a Korean saying I&apos;ve lived by without ever being taught it: 강강약약. Strong
             with the strong, gentle with the gentle. When my little sister was born, I apparently
             just knew. I used to pick up snails and worms off the street because they were drying
@@ -58,6 +53,12 @@ export default function AboutPage() {
             with my 80-year-old grandmother and taught her how to video call, so she&apos;d always
             have a way to reach me. I didn&apos;t think of any of this as unusual until someone
             pointed it out. That&apos;s just how I&apos;m wired.
+          </p>
+          <p className="text-lg leading-relaxed mb-5">
+            I&apos;m a natural leader — not in the &ldquo;I&apos;ll do everything myself&rdquo; way, but in the way
+            that I know how to get the right people moving in the right direction. I come alive when
+            I&apos;m leading. Giving people ownership, making things click into place, watching a
+            team actually work — that&apos;s where I feel most alive.
           </p>
         </section>
       </HeroReveal>
@@ -108,12 +109,7 @@ export default function AboutPage() {
       <HeroReveal className="pb-20">
         <section>
           <h2 className="text-xs font-mono uppercase tracking-widest text-[var(--muted)] mb-4">Let&apos;s Connect</h2>
-          <a
-            href="mailto:leahchung99@gmail.com"
-            className="inline-block px-5 py-2.5 border border-[var(--foreground)] rounded-full text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"
-          >
-            Email me →
-          </a>
+          <CopyEmailButton />
         </section>
       </HeroReveal>
     </div>
