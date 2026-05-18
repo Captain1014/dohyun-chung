@@ -17,7 +17,7 @@ export default function WorkPage() {
           <header className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
               <h1 className="text-7xl md:text-8xl font-bold tracking-tight leading-none mb-3">Work</h1>
-              <p className="text-[var(--muted)]">Solutions Engineer · Cloud & Enterprise SaaS · Bilingual KR/EN</p>
+              <p className="text-[var(--muted)]">Enterprise Integration · Customer-Facing Technical · Bilingual KR/EN</p>
             </div>
             <div className="flex items-center gap-3 self-start sm:self-auto">
               <a
