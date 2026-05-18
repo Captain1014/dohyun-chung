@@ -39,7 +39,8 @@ export default function AboutPage() {
           <p className="text-lg leading-relaxed mb-5">
             Growing up, both my parents worked hard and didn&apos;t want me sitting home alone
             after school — so they enrolled me in at least two extracurriculars every single day.
-            Instruments, dance, sports. You name it, I probably tried it.
+            Instruments, dance, sports. You name it, I probably tried it. Looking back, that&apos;s
+            what opened my eyes to so many different worlds.
           </p>
           <p className="text-lg leading-relaxed mb-5">
             There&apos;s a Korean saying I&apos;ve lived by without ever being taught it: 강강약약. Strong
