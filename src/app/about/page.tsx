@@ -42,10 +42,6 @@ export default function AboutPage() {
             Instruments, dance, sports. You name it, I probably tried it.
           </p>
           <p className="text-lg leading-relaxed mb-5">
-            For a long time, that made me feel like I wasn&apos;t truly talented at anything —
-            just comfortably <em>mid</em> at everything. But I&apos;ve come to love it.
-          </p>
-          <p className="text-lg leading-relaxed mb-5">
             There&apos;s a Korean saying I&apos;ve lived by without ever being taught it: 강강약약. Strong
             with the strong, gentle with the gentle. When my little sister was born, I apparently
             just knew. I used to pick up snails and worms off the street because they were drying
