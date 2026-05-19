@@ -44,12 +44,12 @@ export default function AboutPage() {
           </p>
           <p className="text-lg leading-relaxed mb-5">
             There&apos;s a Korean saying I&apos;ve lived by without ever being taught it: 강강약약. Strong
-            with the strong, gentle with the gentle. When my little sister was born, I apparently
-            just knew. I used to pick up snails and worms off the street because they were drying
-            out and dying and I couldn&apos;t walk past them. Before I moved to New York, I sat down
-            with my 80-year-old grandmother and taught her how to video call, so she&apos;d always
-            have a way to reach me. I didn&apos;t think of any of this as unusual until someone
-            pointed it out. That&apos;s just how I&apos;m wired.
+            with the strong, gentle with the gentle. With people who are quieter or more hesitant,
+            I naturally slow down — I listen more, check in more, make sure they actually feel
+            heard. And with people who can match the energy, I love it: the back and forth, the
+            debate, working through hard problems together until something better comes out the
+            other side. I didn&apos;t think of any of this as unusual until someone pointed it out.
+            That&apos;s just how I&apos;m wired.
           </p>
           <p className="text-lg leading-relaxed mb-5">
             I&apos;m a natural leader — not in the &ldquo;I&apos;ll do everything myself&rdquo; way, but in the way
