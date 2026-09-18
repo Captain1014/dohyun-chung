@@ -3,13 +3,15 @@
 
 **Google Cloud Customer Engineer Preparation**
 
-A comprehensive study and preparation program for Dohyun Chung to transition from AWS/SaaS background to Google Cloud Customer Engineer at Google Korea. Covers GCP technical knowledge, Associate Cloud Engineer certification (June 2026 exam), Google Cloud Next '25 announcements, and CE-specific interview preparation.
+A comprehensive study and preparation program for Dohyun Chung to transition from AWS/SaaS background to Google Cloud Customer Engineer at Google Korea. Covers GCP breadth via the **ACE exam guide curriculum (ACE exam not taken)**, **Professional Cloud Architect** as the certification target, Google Cloud Next '25 announcements, CE-specific interview preparation, and **non-cert prep** documented in `docs/study/ce-prep-beyond-certification.md`.
 
-**Core Value:** Master Google Cloud services deeply enough to confidently demonstrate technical expertise and customer-facing solution design in the CE interview process.
+**Core Value:** Master Google Cloud services deeply enough to confidently demonstrate technical expertise and customer-facing solution design in the CE interview process — with credentials as one signal among several (see `PROJECT.md` Context).
+
+**Master plan:** `docs/plan/MASTER_PLAN.md` (timeline, pillars, weekly rhythm, AWS→GCP mapping template).
 
 ### Constraints
 
-- **Timeline**: ACE exam in June 2026 (~3 months), CE application in ~6 months
+- **Timeline**: Finish ACE-scope study mid-2026; **PCA** exam when ready; CE application ~Sept 2026 (flex)
 - **Learning Style**: Explanation + Quiz verification + Documentation of all studied content
 - **Language**: Study materials in English, communication in Korean
 - **Focus**: Google Cloud ecosystem only — no multi-cloud distraction
@@ -41,6 +43,13 @@ A comprehensive study and preparation program for Dohyun Chung to transition fro
 | Vertex AI documentation | Free | AI/ML depth for CE | CE interviews in 2026 center on AI use cases; must be fluent in Vertex AI ecosystem |
 | Google Cloud Next '25 blog | Free | Current GCP direction | CE role requires knowing what Google is selling TODAY, not just what exists |
 | Glassdoor CE interview reports | Free | Interview structure intel | Best available community data on CE interview rounds and question types |
+| `docs/study/ce-prep-beyond-certification.md` | Free | Hiring-context prep | Summarizes what to prepare beyond ACE/PCA, including observed KR CE profile patterns |
+### Certification targets (stack order)
+| Resource | Cost | Purpose | Why |
+|----------|------|---------|-----|
+| **PCA** (Professional Cloud Architect) | Paid | **Primary Google Cloud credential** | After **ACE curriculum** (no ACE exam); aligns with KR CE profiles and solution-design depth |
+| `docs/plan/pca-exam-prep.md` | Free | PCA **new syllabus** notes | Case studies, format, topics — cross-check with official exam guide |
+| **CKAD** | — | **Deferred** — not pursuing in current plan | Resume already shows **SWE** work; user opted out for now |
 ### Hands-On Environment
 | Resource | Cost | Purpose | Why |
 |----------|------|---------|-----|
@@ -60,12 +69,12 @@ A comprehensive study and preparation program for Dohyun Chung to transition fro
 | Cloud Skills Boost subscription | $29/month x 3 months = $87 | Months 1-3 |
 | Udemy ACE course | $15-20 (sale) | Month 1 |
 | Udemy practice exams | $15-20 (sale) | Month 2-3 |
-| ACE exam fee | $200 USD | June 2026 |
+| PCA exam fee (typical) | ~$200 USD | When booking |
 | GCP project costs | ~$0-20 (stay within free tier) | Ongoing |
 | **Total** | **~$320-330 USD** | 3-month window |
 ## Sources
 - Google Cloud Skills Boost: https://www.cloudskillsboost.google/paths/11
-- ACE exam registration and fee: https://webassessor.com/googlecloud
+- Google Cloud certification exams: https://webassessor.com/googlecloud
 - Udemy course enrollment data: https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/
 - ExamTopics ACE question bank: https://www.examtopics.com/exams/google/associate-cloud-engineer/
 - Whizlabs GCP ACE: https://www.whizlabs.com/blog/gcp-associate-cloud-engineer-exam-questions/

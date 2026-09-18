@@ -1,7 +1,7 @@
 # Technology Stack: Study Tool Recommendations
 
-**Project:** GCP ACE Certification + CE Interview Preparation
-**Researched:** 2026-03-26
+**Project:** GCP (ACE curriculum + PCA + CE Interview)
+**Researched:** 2026-03-26 · **Updated:** 2026-03-30 (PCA prep notes + credential path)
 
 This file defines the recommended "stack" of study tools, platforms, and resources — the tools you will use to learn, not the technologies you are learning about.
 
@@ -34,6 +34,15 @@ This file defines the recommended "stack" of study tools, platforms, and resourc
 | Vertex AI documentation | Free | AI/ML depth for CE | CE interviews in 2026 center on AI use cases; must be fluent in Vertex AI ecosystem |
 | Google Cloud Next '25 blog | Free | Current GCP direction | CE role requires knowing what Google is selling TODAY, not just what exists |
 | Glassdoor CE interview reports | Free | Interview structure intel | Best available community data on CE interview rounds and question types |
+| `docs/study/ce-prep-beyond-certification.md` | Free | Hiring-context prep | Summarizes what to prepare beyond ACE/PCA, including observed KR CE profile patterns |
+
+### Certification targets (stack order)
+| Resource | Cost | Purpose | Why |
+|----------|------|---------|-----|
+| **PCA** (Professional Cloud Architect) | Paid | **Primary Google Cloud credential** | After ACE **curriculum** (no ACE exam); aligns with KR CE profiles |
+| `docs/plan/pca-exam-prep.md` | Free | **PCA new syllabus** prep | Case study names, 60Q/2h format, topic weights, resources — verify vs official guide |
+| Whizlabs (PCA scenarios) | Paid / trial | Scenario-style practice | Community: decent for PCA-style tradeoff questions; avoid dumps |
+| **CKAD** | — | **Out of current plan** | User deferred; resume documents SWE experience |
 
 ### Hands-On Environment
 | Resource | Cost | Purpose | Why |
@@ -62,7 +71,7 @@ This file defines the recommended "stack" of study tools, platforms, and resourc
 | Cloud Skills Boost subscription | $29/month x 3 months = $87 | Months 1-3 |
 | Udemy ACE course | $15-20 (sale) | Month 1 |
 | Udemy practice exams | $15-20 (sale) | Month 2-3 |
-| ACE exam fee | $200 USD | June 2026 |
+| PCA exam fee (typical) | ~$200 USD | When booking |
 | GCP project costs | ~$0-20 (stay within free tier) | Ongoing |
 | **Total** | **~$320-330 USD** | 3-month window |
 
@@ -73,7 +82,7 @@ Free tier covers most lab work. The $300 GCP trial credit nearly offsets all pro
 ## Sources
 
 - Google Cloud Skills Boost: https://www.cloudskillsboost.google/paths/11
-- ACE exam registration and fee: https://webassessor.com/googlecloud
+- Google Cloud certification exams: https://webassessor.com/googlecloud
 - Udemy course enrollment data: https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/
 - ExamTopics ACE question bank: https://www.examtopics.com/exams/google/associate-cloud-engineer/
 - Whizlabs GCP ACE: https://www.whizlabs.com/blog/gcp-associate-cloud-engineer-exam-questions/

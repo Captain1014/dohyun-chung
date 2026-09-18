@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dohyun Chung - Resume</title>
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: letter; margin: 0; }
+
+  :root {
+    --accent: #1a56db;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --light: #f3f4f6;
+    --border: #e5e7eb;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 10.5px;
+    padding: 36px 48px;
+    max-width: 794px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .subtitle {
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .contact {
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact a:hover { color: var(--accent); }
+  .contact .sep { color: #d1d5db; }
+
+  .section-title {
+    font-size: 8.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    margin-top: 22px;
+  }
+
+  .summary {
+    font-size: 10.5px;
+    line-height: 1.55;
+    color: #374151;
+    margin-bottom: 0;
+  }
+
+  .job { margin-bottom: 22px; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0px;
+  }
+
+  .job-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .job-date {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .job-company {
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .job ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: #374151;
+    margin-bottom: 5px;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .job li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8px;
+    top: 1px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-degree {
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  .edu-school {
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .edu-date {
+    font-size: 10px;
+    color: var(--muted);
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .skills {
+    font-size: 10.5px;
+    line-height: 2.4;
+    color: #374151;
+  }
+
+  .skills .row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .skills .cat {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 10px;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>정도현 (Dohyun Chung)</h1>
+  <div class="subtitle">프로그램 관리 &middot; 조직 간 실행 조율 &middot; 테크 조직 운영 &middot; 한국어/영어 이중언어</div>
+  <div class="contact">
+    leahchung99@gmail.com<span class="sep">&nbsp;|&nbsp;</span>뉴욕, NY &middot; 서울 이전 예정<span class="sep">&nbsp;|&nbsp;</span><a href="https://dohyun-chung.vercel.app">포트폴리오</a><span class="sep">&nbsp;|&nbsp;</span><a href="https://www.linkedin.com/in/dohyun-chung/">LinkedIn</a>
+  </div>
+</div>
+
+<div class="section-title">요약</div>
+<p class="summary">
+  테크 조직 내에서 3년 이상 부서 간 프로젝트 실행을 주도해온 이중언어(한국어/영어) PM입니다. 비즈니스 부서의 요구사항을 실행 계획으로 전환하고, 상충하는 팀 간 우선순위를 조율하며, 착수부터 출시까지 프로그램 수준의 마일스톤을 관리합니다. 이슈가 이해관계자에게 도달하기 전에 감지하는 운영 체계를 설계하며, 기술·비기술 조직 모두와 원활하게 소통합니다.
+</p>
+
+<div class="section-title">경력</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">소프트웨어 엔지니어 &amp; 테크니컬 프로그램 리드</span>
+    <span class="job-date">2024년 4월 &ndash; 현재</span>
+  </div>
+  <div class="job-company">Kiss Products, Inc. &mdash; 뉴욕, NY &nbsp;(미국 1위 네일 브랜드 &middot; 100개국 이상 H&amp;B 글로벌 리더)</div>
+  <ul>
+    <li>벤더 개발팀, 벤더 PM, 미국 사업부, 사내 엔지니어링 등 4개 조직 간 수 주간 교착 상태에서 조직 간 조율 허브로 역할 &mdash; 각 이해관계자의 요구사항을 수집하고 상충하는 우선순위를 하나의 실행 계획으로 정리하여 기한 내 출시 달성.</li>
+    <li>KRS POS를 기획부터 프로덕션까지 프로그램 리드로 전담 &mdash; C레벨 임원진에게 솔루션 설계 발표, 전체 구현 사이클의 마일스톤 관리, 출시 30일 전 치명적 데이터 격리 리스크를 사전 감지하고 검토 체크포인트를 도입하여 신규 파트너 온보딩 시간을 수일에서 30분 이내로 단축.</li>
+    <li>엔지니어링 및 사업 팀 간 SAP &harr; Sales Platform 연동 조율 &mdash; Jira로 납기 마일스톤과 차단 이슈를 추적하고, 데이터 동기화 장애가 비즈니스 운영에 영향을 미치기 전에 에스컬레이션하며, 지속적 안정성을 위한 운영 체크포인트 수립.</li>
+    <li>Sales Platform 내부 사용자 300명 이상의 요구사항을 지속적으로 수집 &mdash; 이해관계자 피드백을 수집·분류하고, 비즈니스 영향도 기준으로 우선순위를 설정하며, 엔지니어링 팀과 협력하여 개선 사항 실행 조율.</li>
+    <li>출시 체크리스트, 장애 회고 문서, 플랫폼 온보딩 가이드를 포함한 운영 체계 설계 &mdash; 플랫폼 전반의 실행 프로세스를 표준화하고 팀이 별도 보고 없이 반복 이슈를 자체 해결할 수 있는 구조 구축.</li>
+    <li>KRS POS, SAP 연동, Sales Platform 운영 세 가지 이니셔티브를 동시에 담당하며 각 프로젝트의 일정과 우선순위를 High-level에서 조율 &mdash; 주간 단위로 엔지니어링 팀 및 경영진에게 진행 현황을 보고하고, 리스크 발생 시 적시에 에스컬레이션하여 전체 딜리버리 일정을 유지.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">소프트웨어 엔지니어 &amp; 테크니컬 오퍼레이션스</span>
+    <span class="job-date">2023년 5월 &ndash; 2024년 4월</span>
+  </div>
+  <div class="job-company">24/7 Teach &mdash; 뉴욕, NY</div>
+  <ul>
+    <li>3,000명 이상의 최종 사용자와 엔지니어링 팀 간 요구사항 연계 역할 &mdash; 모호한 요청을 실행 가능한 스펙으로 정리하고, 영향도 기준으로 우선순위를 설정하며, 2주 단위 실행 사이클로 해결 진행 추적.</li>
+    <li>장애 유형, 에스컬레이션 기준, 임시 해결책으로 구성된 내부 지식 베이스 구축 &mdash; 재사용 가능한 운영 체계를 통해 조사 시간을 단축하고 반복 이슈에 대한 팀 대응 표준화.</li>
+  </ul>
+</div>
+
+<div class="section-title">학력</div>
+<div class="edu-header">
+  <div>
+    <div class="edu-degree">컴퓨터공학 &amp; 사회학 학사 (B.A. in Computer Science &amp; Sociology)</div>
+    <div class="edu-school">뉴욕대학교 (New York University)</div>
+  </div>
+  <span class="edu-date">2023년 12월</span>
+</div>
+
+<div class="section-title">스킬</div>
+<div class="skills">
+  <div class="row"><span class="cat">언어</span> 한국어 (네이티브) &middot; 영어 (유창)</div>
+  <div class="row"><span class="cat">프로그램 관리</span> 부서 간 실행 조율 &middot; 이해관계자 관리 &middot; 요구사항 수집 &middot; 리스크 식별 &middot; 이슈 에스컬레이션 &middot; 마일스톤 관리</div>
+  <div class="row"><span class="cat">운영</span> 프로세스 설계 &middot; Jira &middot; 출시 기획 &middot; 장애 대응 &middot; 진행 상황 보고 &middot; 문서화</div>
+  <div class="row"><span class="cat">기술</span> REST APIs &middot; SQL &middot; AWS &middot; Python &middot; JavaScript/TypeScript &middot; Git &middot; Linux</div>
+</div>
+
+</body>
+</html>

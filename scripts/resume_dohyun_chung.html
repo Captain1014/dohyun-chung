@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dohyun Chung — Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.43;
+      color: #1a1a1a;
+      background: white;
+      padding: 0.65in 0.72in 0.58in;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      margin-bottom: 11px;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 9px;
+    }
+    h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 2px;
+    }
+    .subtitle {
+      font-size: 9pt;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .contact {
+      font-size: 8.5pt;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .contact span, .contact a {
+      color: #555;
+      text-decoration: none;
+    }
+    .contact span + span::before,
+    .contact a + span::before,
+    .contact span + a::before,
+    .contact a + a::before {
+      content: " | ";
+      color: #ccc;
+      padding: 0 6px;
+    }
+
+    /* ── Section titles ── */
+    section { margin-bottom: 14px; }
+    .section-title {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 5px;
+      border-bottom: 0.5px solid #e0e0e0;
+      padding-bottom: 3px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 8.8pt;
+      color: #333;
+      line-height: 1.42;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 11px; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .job-title { font-size: 9.5pt; font-weight: 700; }
+    .job-date {
+      font-size: 7.5pt;
+      color: #888;
+      white-space: nowrap;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.3px;
+    }
+    .job-company {
+      font-size: 8.5pt;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    ul { padding-left: 13px; }
+    li {
+      font-size: 8.6pt;
+      margin-bottom: 2px;
+      line-height: 1.38;
+      color: #222;
+    }
+
+    /* ── Education ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-degree { font-size: 9pt; font-weight: 600; }
+    .edu-school { font-size: 8.5pt; color: #555; margin-top: 1px; }
+    .edu-date {
+      font-size: 7.5pt;
+      color: #888;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 3px 12px;
+    }
+    .skill-label {
+      font-size: 8pt;
+      color: #888;
+      font-weight: 600;
+      padding-top: 1px;
+    }
+    .skill-value { font-size: 8.5pt; color: #222; }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { padding: 0.48in 0.65in 0.4in; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dohyun Chung</h1>
+    <p class="subtitle">Technical TPM &middot; Global Retail Systems &amp; Logistics</p>
+    <div class="contact">
+      <span>leahchung99@gmail.com</span>
+      <span>Seoul, South Korea &middot; Open to Remote</span>
+      <a href="https://dohyun-chung.vercel.app">Portfolio</a>
+      <a href="https://linkedin.com/in/dohyun-chung">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2 class="section-title">Summary</h2>
+    <p>Technical TPM with a strong engineering background in retail systems and logistics. Proven track record of scaling enterprise platforms (days &rarr; &lt;30 min onboarding) and aligning cross-border stakeholders across India and Korea. Specializes in multi-tenant architecture, API-driven systems, and full-cycle product delivery — from roadmap to production launch.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Technical PM &amp; Software Engineer</span>
+        <span class="job-date">Apr 2024 – Present</span>
+      </div>
+      <p class="job-company">Kiss Products, Inc. &mdash; New York, NY</p>
+      <ul>
+        <li>Led launch of a multi-tenant enterprise retail OS; designed tenant isolation architecture enabling rapid store expansion &mdash; onboarding reduced from days to &lt;30 min via API-driven provisioning.</li>
+        <li>Served as sole communication hub across a 24-person cross-border program (India vendor &times;10, in-house dev &times;3, business &times;10); resolved conflicts between 4 stakeholder groups and built the flywheel of alignment that kept schedule, budget, and priorities in sync throughout.</li>
+        <li>Recovered a D-30 launch crisis: identified critical vendor deviation from architecture spec, led component rewrite with in-house dev team, and shipped on schedule; introduced Design Doc gates and scope checklists &mdash; zero repeat incidents in Phase 2.</li>
+        <li>Engineered centralized export pipeline across 20+ modules; reduced data export from 4+ manual steps to 1-click, eliminating timeout failures on datasets of 50k+ rows.</li>
+        <li>Designed and co-implemented atomic transaction flow (Order &rarr; Receiving &rarr; Invoice &rarr; Inventory); achieved 0% cross-entity data inconsistency and ~80% reduction in receiving task time &mdash; critical for e-commerce order integrity.</li>
+        <li>Owned full-cycle delivery of an internal field sales platform; engineered SAP-integrated order entry and real-time inventory visibility, serving as sole PM and developer for ongoing feature requests.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Front-end Engineer &amp; PM</span>
+        <span class="job-date">May 2023 – Apr 2024</span>
+      </div>
+      <p class="job-company">24/7 Teach</p>
+      <ul>
+        <li>Drove UI/UX strategy and front-end development for Naomi AI, an AI-powered K-12 learning platform serving 3,000+ students; led accessibility compliance and usability across all student-facing interfaces.</li>
+        <li>Partnered with CEO and Marketing to analyze conversion data; directly influenced feature prioritization roadmap to align product development with user retention objectives.</li>
+        <li>Defined data retrieval requirements and collaborated with backend engineers to optimize API payloads; translated curriculum designer feedback and student engagement analytics into shipped product improvements.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Front-end Engineer Intern</span>
+        <span class="job-date">Jan 2023 – Apr 2023</span>
+      </div>
+      <p class="job-company">SkyIT Services</p>
+      <ul>
+        <li>Engineered client-side features for a B2B logistics platform in React: inventory management and real-time shipment tracking.</li>
+        <li>Defined API consumption patterns with backend engineers; delivered key client-facing dashboard on schedule under Agile sprints.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-row">
+      <div>
+        <p class="edu-degree">B.A. in Computer Science &amp; Sociology</p>
+        <p class="edu-school">New York University</p>
+      </div>
+      <span class="edu-date">Dec 2023</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-label">Product</span>
+      <span class="skill-value">Technical PM &middot; Roadmapping &middot; Stakeholder Management &middot; Agile / Scrum &middot; Vendor Management &middot; API Design &middot; Launch Readiness &middot; E-commerce Operations &middot; SDLC Optimization &middot; PRD Writing &middot; Functional Specification</span>
+      <span class="skill-label">Engineering</span>
+      <span class="skill-value">Full-Stack Development &middot; REST API Design &middot; Microservices Architecture &middot; SQL &middot; Data Visualization &middot; Open Source Platform Development</span>
+      <span class="skill-label">Tools</span>
+      <span class="skill-value">Jira &middot; Figma &middot; Notion</span>
+      <span class="skill-label">Languages</span>
+      <span class="skill-value">Korean (Native) &middot; English (Fluent)</span>
+    </div>
+  </section>
+
+</body>
+</html>

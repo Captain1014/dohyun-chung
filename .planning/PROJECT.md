@@ -2,7 +2,11 @@
 
 ## What This Is
 
-A comprehensive study and preparation program for Dohyun Chung to transition from AWS/SaaS background to Google Cloud Customer Engineer at Google Korea. Covers GCP technical knowledge, Associate Cloud Engineer certification (June 2026 exam), Google Cloud Next '25 announcements, and CE-specific interview preparation.
+A comprehensive study and preparation program for Dohyun Chung to transition from AWS/SaaS background to Google Cloud Customer Engineer at Google Korea. Covers GCP technical knowledge using the **Associate Cloud Engineer exam guide as the breadth syllabus (ACE exam not taken)**, **Professional Cloud Architect** certification as the primary credential, Google Cloud Next '25 announcements, and CE-specific interview preparation.
+
+**Master plan (execution order, monthly timeline, weekly rhythm):** [`docs/plan/MASTER_PLAN.md`](../docs/plan/MASTER_PLAN.md)
+
+**Resume source of truth:** [`scripts/resume.html`](../scripts/resume.html) — update planning docs when titles or roles change.
 
 ## Core Value
 
@@ -16,37 +20,45 @@ Master Google Cloud services deeply enough to confidently demonstrate technical 
 
 ### Active
 
+**Technical foundation**
+
 - [ ] Complete understanding of GCP core services (Compute, Storage, Networking, Databases)
 - [ ] Deep knowledge of GCP AI/ML services (Vertex AI, Gemini, Agent Builder)
 - [ ] Mastery of Google Cloud Next '25 announcements and new technologies
-- [ ] Pass Associate Cloud Engineer certification exam (June 2026)
-- [ ] Prepare resume tailored to Google Cloud CE role
-- [ ] Practice CE-specific interview scenarios (technical + customer-facing)
-- [ ] Build hands-on GCP project demonstrating solution design skills
-- [ ] Map existing AWS experience to GCP equivalents
+- [ ] Complete **ACE exam guide curriculum** (Udemy / Skills Boost / practice sets for **gap checks only**) — **do not register for the ACE exam**
+- [ ] Pass **Professional Cloud Architect (PCA)** exam — *primary Google Cloud credential for this plan*
+- [ ] Build hands-on GCP project(s) with short architecture write-ups (customer-scenario oriented, not exam-only)
+- [ ] Map existing AWS experience to GCP equivalents (service mapping + migration talking points)
+- [ ] **CKAD:** not in scope for this preparation window — **deferred** (user decision; revisit only if priorities change)
+
+**CE application (beyond certification)**
+
+- [ ] Resume and LinkedIn aligned to CE language: pre-sales, demos, PoC, enterprise architecture, technical trust
+- [ ] STAR / behavioral stories for customer-facing technical work (`docs/study/interview-star-stories.md`)
+- [ ] Practice CE-specific scenarios: whiteboard architecture, technical + stakeholder angles
+- [ ] Read and internalize `docs/study/ce-prep-beyond-certification.md` (KR CE profile patterns + checklist)
 
 ### Out of Scope
 
-- GCP Professional certifications — ACE first, professional certs later
-- Deep Kubernetes/GKE administration — CE needs conceptual understanding, not SRE-level depth
-- Non-Google cloud platforms — focus exclusively on GCP ecosystem
-- Coding interview prep — CE is not SWE; focus on solution design and customer scenarios
+- **SRE-level** Kubernetes/GKE cluster administration — CE needs design-level GKE/app-on-K8s literacy (CKAD-level concepts help); deep day-2 ops optional
+- **Leetcode-style** coding interview prep — CE is not SWE; solution design and customer scenarios first
+- **Multi-cloud as primary study track** — GCP ecosystem remains the focus; AWS background is a narrative asset, not a parallel cert chase
+
+**Credential note:** **ACE** is study syllabus only. **PCA** is the target exam. **CKAD** is **not** being pursued in this plan — many KR CEs list it, but it is optional/future-only.
 
 ## Context
 
-**Current Background:**
+**Current Background (see `scripts/resume.html`):**
 - B.A. Computer Science & Sociology, NYU (Dec 2023)
-- 3+ years customer-facing engineering (300+ enterprise users)
-- AWS & Snowflake production experience (PIM platform, Enterprise Retail OS)
-- Cross-border stakeholder management (India, US, Korea)
-- Bilingual Korean (Native) / English (Fluent)
-- Based in Seoul, South Korea
+- **Software Engineer & Technical Customer Lead** (Kiss Products, Apr 2024–present): PIM / Enterprise Retail OS on **AWS & Snowflake**, 300+ enterprise users; prior **Front-end Engineer & Product Manager** (24/7 Teach), **Front-end Engineer Intern** (SkyIT)
+- **Software engineering delivery:** multi-tenant architecture, end-to-end development, API design, launch — combined with **customer-facing** technical lead and cross-border coordination (India, US, Korea)
+- Bilingual Korean (Native) / English (Fluent) · Based in Seoul, South Korea
 
 **Strengths for CE Role:**
-- Customer-facing technical troubleshooting and root-cause analysis
-- Translating business requirements into technical solutions
+- Hands-on **engineering** plus primary technical contact for enterprise users (aligns with CE’s technical depth + customer trust)
+- Customer-facing troubleshooting, root-cause analysis, translating requirements to specs and solutions
 - Multi-stakeholder management across cultures and time zones
-- Enterprise SaaS platform launch experience (zero to production)
+- Zero-to-production SaaS launch and crisis recovery (e.g. D-30 launch)
 
 **Gaps to Address:**
 - No GCP hands-on experience (AWS-based background)
@@ -55,13 +67,16 @@ Master Google Cloud services deeply enough to confidently demonstrate technical 
 - No familiarity with Google Cloud Next '25 announcements
 - Need to understand Google CE role expectations vs. current Solutions Engineer positioning
 
+**Observed KR CE profiles (public LinkedIn-style samples, March 2026):**  
+Several current Google Korea Cloud Customer Engineers **do not list Associate Cloud Engineer**. Patterns include long tenure with enterprise pre-sales + GKE (legacy vendor certs), or **Professional Cloud Architect + CKAD** with software/cloud transitions, or **AWS-heavy background + GCP PCA**. **CKAD in particular is very common** across KR CE profiles — consistent with GKE-heavy customer work and **possible org-level encouragement or support** for the exam. This does **not** define official hiring policy. **Chosen path:** learn breadth via **ACE curriculum**, certify with **PCA** (not ACE). Detail: `docs/study/ce-prep-beyond-certification.md`, `docs/plan/MASTER_PLAN.md`.
+
 **Target Timeline:**
-- June 2026: ACE certification exam
-- ~September 2026: Apply for Google Cloud CE position at Google Korea
+- **End of May 2026:** **PCA** exam (~2-month prep window from late March)
+- **June 2026:** Apply to Google Cloud CE (Google Korea) shortly after PCA result
 
 ## Constraints
 
-- **Timeline**: ACE exam in June 2026 (~3 months), CE application in ~6 months
+- **Timeline**: ACE-scope study + PCA sprint through **May 2026**; **CKAD / second portfolio** may slip to post-application if needed
 - **Learning Style**: Explanation + Quiz verification + Documentation of all studied content
 - **Language**: Study materials in English, communication in Korean
 - **Focus**: Google Cloud ecosystem only — no multi-cloud distraction
@@ -70,9 +85,11 @@ Master Google Cloud services deeply enough to confidently demonstrate technical 
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| ACE certification before CE application | Industry-standard credential validates GCP knowledge | -- Pending |
+| **ACE exam not taken**; **ACE curriculum** for breadth; **PCA** as certification | Aligns with KR CE profiles (PCA common); avoids duplicate Associate credential; measurable syllabus + architecture exam | **Adopted** |
 | Study Google Cloud Next '25 content as priority | Latest announcements show current GCP direction and CE talking points | -- Pending |
 | Quiz-based learning verification | Active recall is more effective than passive reading | -- Pending |
+| Prioritize CE-ready narrative (PoC, architecture, AI/data) alongside certs | Public CE profiles emphasize customer outcomes and domains more than ACE specifically | -- Pending |
+| **CKAD deferred** — not part of current prep | User choice; focus is PCA + CE narrative + GCP evidence | **Adopted** |
 
 ## Evolution
 
@@ -92,4 +109,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-26 after initialization*
+*Last updated: 2026-03-30 — resume-aligned background (SWE + technical customer lead); CKAD deferred*

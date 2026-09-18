@@ -33,7 +33,7 @@ export default function WorkPage() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/dohyun-chung"
+                href="https://www.linkedin.com/in/dohyun-chung/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--foreground)] text-sm hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors"

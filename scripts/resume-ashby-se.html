@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dohyun Chung - Resume</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,7 +20,7 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     color: var(--text);
     line-height: 1.5;
     font-size: 10.5px;
@@ -30,7 +30,6 @@
     background: #fff;
   }
 
-  /* ── Header ── */
   .header {
     border-bottom: 2px solid var(--accent);
     padding-bottom: 10px;
@@ -65,7 +64,6 @@
   .contact a:hover { color: var(--accent); }
   .contact .sep { color: #d1d5db; }
 
-  /* ── Section titles ── */
   .section-title {
     font-size: 8.5px;
     font-weight: 700;
@@ -74,19 +72,17 @@
     color: var(--accent);
     border-bottom: 1px solid var(--border);
     padding-bottom: 4px;
-    margin-bottom: 12px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 18px;
   }
 
-  /* ── Summary ── */
   .summary {
     font-size: 10.5px;
-    line-height: 1.65;
+    line-height: 1.55;
     color: #374151;
     margin-bottom: 0;
   }
 
-  /* ── Jobs ── */
   .job { margin-bottom: 18px; }
 
   .job-header {
@@ -125,9 +121,9 @@
 
   .job li {
     font-size: 10.5px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: #374151;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     padding-left: 12px;
     position: relative;
   }
@@ -141,7 +137,6 @@
     top: 1px;
   }
 
-  /* ── Education ── */
   .edu-header {
     display: flex;
     justify-content: space-between;
@@ -167,7 +162,6 @@
     border-radius: 3px;
   }
 
-  /* ── Skills ── */
   .skills {
     font-size: 10.5px;
     line-height: 2.4;
@@ -193,7 +187,7 @@
 
 <div class="header">
   <h1>Dohyun Chung</h1>
-  <div class="subtitle">Solutions Engineer &middot; Enterprise Integration &amp; Automation &middot; Bilingual KR/EN</div>
+  <div class="subtitle">Support Engineer &middot; Integration Debugging &amp; Engineering Collaboration &middot; Bilingual KR/EN</div>
   <div class="contact">
     leahchung99@gmail.com<span class="sep">&nbsp;|&nbsp;</span>New York, NY &middot; Relocating to Seoul<span class="sep">&nbsp;|&nbsp;</span><a href="https://dohyun-chung.vercel.app">Portfolio</a><span class="sep">&nbsp;|&nbsp;</span><a href="https://www.linkedin.com/in/dohyun-chung/">LinkedIn</a>
   </div>
@@ -201,37 +195,39 @@
 
 <div class="section-title">Summary</div>
 <p class="summary">
-  Bilingual (Korean/English) integration specialist with 3+ years on the customer side of enterprise system projects &mdash; connecting SAP, cloud platforms, and business applications while supporting 300+ users across the US and Europe. Experienced in turning complex technical problems into clear solutions that business teams can actually use. Driven to be the trusted technical advisor that helps customers adopt new platforms quickly and get real value from day one.
+  Bilingual (Korean/English) software engineer with 3+ years specializing in integration debugging and technical support &mdash; reproducing reported issues by testing APIs directly, tracing failures through logs and pipelines, and translating findings into precise bug reports engineering can act on. Comfortable reading code to understand where a sync breaks, and takes full ownership of issues until they are resolved and documented.
 </p>
 
 <div class="section-title">Experience</div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">Software Engineer &amp; Technical Customer Lead</span>
+    <span class="job-title">Software Engineer &amp; Technical Support Lead</span>
     <span class="job-date">Apr 2024 &ndash; Present</span>
   </div>
-  <div class="job-company">Kiss Products, Inc. &mdash; New York, NY <span style="color:#9ca3af;font-weight:400;">&middot; #1 Nail Brand in the US &middot; Global beauty leader in 100+ countries</span></div>
+  <div class="job-company">Kiss Products, Inc. &mdash; New York, NY</div>
   <ul>
-    <li><strong>Sales Platform</strong> &mdash; Technical user support for 300+ internal users (salespeople, CS, admin, and marketing teams) across the US: troubleshoot operational issues in real time, own end-to-end resolution, and ship platform improvements based on direct user feedback.</li>
-    <li><strong>KRS POS</strong> &mdash; Built from zero to production: designed the multi-tenant architecture, caught a critical data isolation issue 30 days before launch, and cut new partner onboarding from days to under 30 minutes. Now serve as the ongoing technical customer lead — reviewing operator requirements, deploying improvements based on feedback, and supporting the business team during the sales process.</li>
-    <li><strong>KRS POS</strong> &mdash; Broke a weeks-long standoff between 4 teams (vendor dev, vendor PM, US business, in-house engineering) by designing a cross-functional delivery plan &mdash; shipped on time.</li>
+    <li>Diagnosed intermittent Sales Platform slowdowns by analyzing server logs and database query patterns in SQL &mdash; identified an order confirmation cron job queue consistently hitting capacity and timing out. Adjusted processing limits and queue logic, fully resolving the issue.</li>
+    <li>Debugged and maintained the SAP &harr; Sales Platform data pipeline: traced sync failures end-to-end, cleared record backlogs, and added observability checkpoints to surface future issues proactively.</li>
+    <li>Diagnosed a merchant-reported data visibility issue on KRS POS &mdash; records visible one day, gone the next &mdash; by tracing it to a UTC timezone hardcoded across multiple back-office pages. Shipped a full cross-page fix and documented the pattern for the engineering team.</li>
+    <li>Debugged recurring OAuth authentication failures on the Sales Platform API &mdash; identified 403 scope errors and token expiry as the primary root causes of daily access complaints, resolved each by correcting grant configurations and permission scopes.</li>
+    <li>Built an automated monitoring bot for the Sales Platform that reads AWS server logs and database state, synthesizes anomalies into structured alerts, and delivers them to the team via messaging &mdash; enabling proactive issue detection before customers report them.</li>
+    <li>Primary technical contact for external merchant customers on KRS POS: reproduce reported issues by testing API endpoints directly, distinguish system failures from configuration and UX problems, and translate findings into clear engineering escalations with reproduction steps.</li>
+    <li>Authored internal documentation including incident post-mortems, Sales Platform FAQ, and KRS POS onboarding guides &mdash; creating reusable references that reduced repeated support requests and accelerated new-hire ramp-up.</li>
   </ul>
 </div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">Software Engineer</span>
+    <span class="job-title">Software Engineer &amp; Technical Support</span>
     <span class="job-date">May 2023 &ndash; Apr 2024</span>
   </div>
-  <div class="job-company">24/7 Teach</div>
+  <div class="job-company">24/7 Teach &mdash; New York, NY</div>
   <ul>
-    <li>Served as sole technical liaison between 3,000+ end users (educators, students) and engineering &mdash; translated classroom pain points into sprint-ready specs and shipped targeted improvements within 2-week cycles.</li>
-    <li>Led front-end development and product roadmap for Naomi AI, an AI-powered K-12 platform; partnered with CEO to analyze conversion data and realigned feature priorities around user retention.</li>
-    <li>Conducted direct user interviews with teachers and curriculum designers; turned qualitative feedback into measurable product improvements adopted by the full user base.</li>
+    <li>Technical liaison between 3,000+ end users and the engineering team &mdash; reproduced ambiguous behavior, traced issues to root cause, and translated findings into precise bug reports with reproduction steps that engineering could act on without further context-gathering.</li>
+    <li>Identified recurring failure patterns across the platform; built an internal knowledge base of failure modes, workarounds, and escalation criteria that shortened investigation time for the entire team.</li>
   </ul>
 </div>
-
 
 <div class="section-title">Education</div>
 <div class="edu-header">
@@ -245,11 +241,9 @@
 <div class="section-title">Skills</div>
 <div class="skills">
   <div class="row"><span class="cat">Languages</span> Korean (Native) &middot; English (Fluent)</div>
-  <div class="row"><span class="cat">Cloud &amp; Data</span> AWS &middot; Snowflake &middot; SAP Integration &middot; REST API Design &middot; SQL &middot; Data Pipelines</div>
-  <div class="row"><span class="cat">Technical</span> Full-stack &amp; app development &middot; HTTP/API Troubleshooting &middot; Web Architecture (Python, JavaScript/TypeScript, React)</div>
-  <div class="row"><span class="cat">Customer-facing</span> Technical Troubleshooting &middot; Root-Cause Analysis &middot; Solution Design &middot; Customer Onboarding &middot; Stakeholder Management</div>
-  <div class="row"><span class="cat">Product &amp; Process</span> Agile / Scrum &middot; PRD Writing &middot; Launch Readiness &middot; Vendor Management</div>
-  <div class="row"><span class="cat">Tools</span> Jira &middot; Figma &middot; Notion &middot; Git</div>
+  <div class="row"><span class="cat">Troubleshooting</span> Integration Debugging &middot; Log Analysis &middot; Root-Cause Analysis &middot; Bug Reproduction &middot; Engineering Escalation</div>
+  <div class="row"><span class="cat">Technical</span> REST APIs &middot; Webhooks &middot; OAuth Debugging &middot; SQL &middot; AWS &middot; HTTP/API Debugging &middot; Python &middot; JavaScript/TypeScript</div>
+  <div class="row"><span class="cat">Communication</span> Technical Writing &middot; Async-first Documentation &middot; Cross-functional Collaboration &middot; Stakeholder Updates</div>
 </div>
 
 </body>

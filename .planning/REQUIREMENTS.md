@@ -20,17 +20,18 @@ Requirements for complete CE preparation (6-month timeline). Each maps to roadma
 - [ ] **FOUND-09**: Proficiently use gcloud CLI for all common operations (compute, storage, IAM, networking)
 - [ ] **FOUND-10**: Understand BigQuery fundamentals (serverless data warehouse, SQL analytics)
 
-### ACE Certification
+### GCP breadth (ACE curriculum, no ACE exam) + PCA
 
 - [ ] **ACE-01**: Master Domain 1 — Setting up a cloud solution environment (IAM, billing, resource hierarchy)
 - [ ] **ACE-02**: Master Domain 2 — Planning and configuring a cloud solution (pricing, compute, storage, networking planning)
 - [ ] **ACE-03**: Master Domain 3 — Deploying and implementing a cloud solution (Compute Engine, GKE, Cloud Run, Cloud Functions, data solutions, networking)
 - [ ] **ACE-04**: Master Domain 4 — Ensuring successful operation (monitoring, logging, Cloud Operations suite)
 - [ ] **ACE-05**: Master Domain 5 — Configuring access and security (IAM, service accounts, audit logs)
-- [ ] **ACE-06**: Achieve 80%+ on timed practice exams consistently before booking real exam
+- [ ] **ACE-06**: Use timed ACE practice sets for **gap checks only** — **do not** register for the ACE exam
 - [ ] **ACE-07**: Understand Terraform basics for GCP infrastructure provisioning
 - [ ] **ACE-08**: Deploy and manage GKE clusters (Autopilot and Standard modes)
-- [ ] **ACE-09**: Pass Associate Cloud Engineer certification exam (June 2026)
+- [ ] **ACE-09**: Complete full ACE exam guide syllabus (courses + labs); **Associate Cloud Engineer exam not taken** (by plan)
+- [ ] **PCA-01**: Pass **Professional Cloud Architect** certification exam
 
 ### AI/ML & Cloud Next '25
 

@@ -16,7 +16,7 @@ export function SocialIcons() {
     <ul className="flex items-center gap-4">
       <li>
         <a
-          href="https://www.linkedin.com/in/dohyun-chung"
+          href="https://www.linkedin.com/in/dohyun-chung/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[var(--foreground)] hover:opacity-70 transition-opacity"

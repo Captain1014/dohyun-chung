@@ -2,77 +2,92 @@
 
 ## Overview
 
-A 6-month preparation program that builds GCP knowledge from zero to CE-interview-ready. The path runs in sequence: establish the GCP mental model (Foundation), earn the ACE credential (Certification), develop CE-differentiating AI/ML depth (Technical Depth), then convert accumulated knowledge into interview performance (Interview Ready). Each phase delivers a verifiable capability milestone before the next begins.
+A 6-month preparation program that builds GCP knowledge from zero to CE-interview-ready. **Single source of truth for month-by-month priorities:** `docs/plan/MASTER_PLAN.md`.
+
+**Credential path (locked):** Complete **Associate Cloud Engineer exam guide curriculum** as the breadth syllabus — **do not sit the ACE exam.** Then sit **Professional Cloud Architect (PCA)**. **CKAD is out of scope for now** (user decision). Then: portfolio **P1**, **Vertex AI portfolio P2**, interview prep.
 
 ## Phases
 
-**Phase Numbering:**
-- Integer phases (1, 2, 3): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
+**Phase Numbering:** Integer phases (1, 2, 3) plus **2.5** between 2 and 3.
 
-Decimal phases appear between their surrounding integers in numeric order.
-
-- [ ] **Phase 1: GCP Foundation** - Build the GCP mental model from an AWS perspective, covering core services hands-on
-- [ ] **Phase 2: ACE Certification** - Pass the Associate Cloud Engineer exam (June 2026 target)
-- [ ] **Phase 3: AI/ML & Cloud Next '25** - Develop CE-differentiating depth in Vertex AI, Gemini, and Google's AI strategy
-- [ ] **Phase 4: CE Interview Preparation** - Convert knowledge into interview performance with rehearsed stories, resume, and presentation
+- [ ] **Phase 1: GCP Foundation** — GCP mental model from an AWS perspective; core services hands-on
+- [ ] **Phase 2: GCP breadth (ACE curriculum, no ACE exam)** — Full ACE exam guide / Udemy ACE path for coverage; timed practice for self-check only; **no ACE registration**
+- [ ] **Phase 2.5: PCA Certification** — Pass **Professional Cloud Architect**
+- [ ] **Phase 3: Portfolio P1** — One documented GCP architecture project (GKE/Cloud Run + data); **no CKAD** in this plan
+- [ ] **Phase 4: AI/ML & Cloud Next '25 + Portfolio P2** — Vertex AI, Gemini, Next announcements; customer-scenario AI demo
+- [ ] **Phase 5: CE Interview Preparation** — STAR bank, resume/LinkedIn, AWS→GCP narrative, mocks
 
 ## Phase Details
 
 ### Phase 1: GCP Foundation
-**Goal**: Operate confidently in GCP using core services, understanding how GCP's model differs from AWS
-**Depends on**: Nothing (first phase)
-**Requirements**: FOUND-01, FOUND-02, FOUND-03, FOUND-04, FOUND-05, FOUND-06, FOUND-07, FOUND-08, FOUND-09, FOUND-10
-**Success Criteria** (what must be TRUE):
-  1. Can explain GCP resource hierarchy, IAM policy inheritance, and service account usage without referencing notes
-  2. Can create and configure a Compute Engine instance, VPC network, Cloud SQL database, and Cloud Storage bucket using gcloud CLI
-  3. Can map any major AWS service to its GCP equivalent and articulate the key architectural differences
-  4. Has completed 20+ hours of Cloud Skills Boost labs with documented proof
-  5. Can query BigQuery and explain when to use it vs. other GCP data services
-**Plans**: TBD
+**Goal:** Operate confidently in GCP using core services; understand how GCP differs from AWS  
+**Depends on:** Nothing  
+**Requirements:** FOUND-01 … FOUND-10  
+**Success Criteria:**
+  1. Can explain GCP resource hierarchy, IAM inheritance, service accounts without notes
+  2. Can create/configure Compute Engine, VPC, Cloud SQL, Cloud Storage via gcloud
+  3. Can map major AWS services to GCP equivalents and state key differences
+  4. 20+ hours Cloud Skills Boost labs documented
+  5. Can query BigQuery and position it vs. other data services  
+**Plans:** TBD
 
-### Phase 2: ACE Certification
-**Goal**: Pass the Associate Cloud Engineer exam in June 2026 with consistent 80%+ on timed practice exams
-**Depends on**: Phase 1
-**Requirements**: ACE-01, ACE-02, ACE-03, ACE-04, ACE-05, ACE-06, ACE-07, ACE-08, ACE-09
-**Success Criteria** (what must be TRUE):
-  1. Scores 80%+ on three consecutive timed practice exams before booking the real exam
-  2. Can deploy and manage GKE clusters (both Autopilot and Standard modes) from the CLI
-  3. Can write Terraform to provision common GCP resources (Compute Engine, VPC, IAM)
-  4. Associate Cloud Engineer certificate is earned (June 2026)
-**Plans**: TBD
+### Phase 2: GCP breadth (ACE curriculum, no ACE exam)
+**Goal:** Cover the full **ACE exam guide** scope as structured learning; **do not** take the ACE exam. Use practice exams only to find gaps.  
+**Depends on:** Phase 1  
+**Requirements:** ACE-01 … ACE-09 (as study units, not exam booking)  
+**Success Criteria:**
+  1. Finished ACE-aligned course path (e.g. Udemy ACE + Skills Boost labs per guide)
+  2. Optional: timed practice sets at target score — **self-assessment only**
+  3. Can deploy/manage GKE (Autopilot and Standard) from CLI; basic Terraform for CE, VPC, IAM
+  4. **No** Associate Cloud Engineer certificate (by design)  
+**Plans:** TBD
 
-### Phase 3: AI/ML & Cloud Next '25
-**Goal**: Articulate and demonstrate Google's AI/ML stack at the depth expected of a CE in a 2026 interview
-**Depends on**: Phase 2
-**Requirements**: AIML-01, AIML-02, AIML-03, AIML-04, AIML-05, AIML-06, AIML-07
-**Success Criteria** (what must be TRUE):
-  1. Can walk through Vertex AI end-to-end (training, tuning, deployment, prediction) in a whiteboard explanation
-  2. Can demonstrate a working AI project using Vertex AI and Gemini that is portfolio-presentable
-  3. Can explain Google Cloud Next '25 key announcements (Ironwood TPU, ADK, A2A, Gemini in BigQuery, Cloud WAN) and their customer relevance
-  4. Can articulate Google's AI competitive advantages vs AWS and Azure in a 3-minute customer pitch
-**Plans**: TBD
+### Phase 2.5: PCA Certification
+**Goal:** Earn **Professional Cloud Architect** — primary external credential for this plan  
+**Depends on:** Phase 2  
+**Requirements:** Official PCA guide + Skills Boost; see **`docs/plan/pca-exam-prep.md`** (new syllabus case studies, format 60Q/2h, topic weights from community — verify against Google docs)  
+**Success Criteria:**
+  1. PCA exam passed (book after Phase 2 breadth is solid; voucher programs e.g. Get Certified worth checking)  
+**Plans:** TBD
 
-### Phase 4: CE Interview Preparation
-**Goal**: Enter the CE interview process with rehearsed STAR stories, a tailored resume, a presentation-ready scenario, and a documented AWS-to-GCP narrative
-**Depends on**: Phase 3
-**Requirements**: INTV-01, INTV-02, INTV-03, INTV-04, INTV-05, INTV-06, INTV-07
-**Success Criteria** (what must be TRUE):
-  1. Has 7-10 STAR stories written and rehearsed, each mapped to one of Google's 4 hiring attributes
-  2. Can deliver the 7-slide CE technical presentation from memory in under 10 minutes with clear Q&A handling
-  3. Resume is updated to frame experience as pre-sales solution design and customer technical advisory
-  4. Has completed at least one full mock interview covering all 5 CE interview rounds
-  5. Can explain the AWS-to-GCP migration narrative positioning prior AWS experience as customer empathy
-**Plans**: TBD
+### Phase 3: Portfolio P1
+**Goal:** One documented enterprise-style GCP project (hands-on evidence beyond PCA)  
+**Depends on:** Phase 2.5  
+**Success Criteria:**
+  1. P1: README + architecture diagram + repo/demo + security/cost notes  
+**Plans:** TBD
+
+### Phase 4: AI/ML & Cloud Next '25 + Portfolio P2
+**Goal:** CE-level Vertex AI / Gemini depth + **Portfolio P2**  
+**Depends on:** Phase 3  
+**Requirements:** AIML-01 … AIML-07  
+**Success Criteria:**
+  1. Whiteboard-level Vertex AI end-to-end
+  2. Working Vertex AI + Gemini artifact (portfolio-ready)
+  3. Next ’25 themes and customer relevance
+  4. Short competitive pitch vs AWS/Azure on AI  
+**Plans:** TBD
+
+### Phase 5: CE Interview Preparation
+**Goal:** STAR, resume, AWS→GCP story, mocks  
+**Depends on:** Phase 4  
+**Requirements:** INTV-01 … INTV-07  
+**Success Criteria:** (unchanged — 7–10 STAR stories, presentation, resume, mock, migration narrative)  
+**Plans:** TBD
 
 ## Progress
 
-**Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4
+**Execution order:** 1 → 2 → 2.5 → 3 → 4 → 5
 
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 1. GCP Foundation | 0/TBD | Not started | - |
-| 2. ACE Certification | 0/TBD | Not started | - |
-| 3. AI/ML & Cloud Next '25 | 0/TBD | Not started | - |
-| 4. CE Interview Preparation | 0/TBD | Not started | - |
+| Phase | Status | Completed |
+|-------|--------|-----------|
+| 1. GCP Foundation | Not started | - |
+| 2. Breadth (ACE curriculum, no exam) | Not started | - |
+| 2.5 PCA | Not started | - |
+| 3. Portfolio P1 | Not started | - |
+| 4. AI/ML + P2 | Not started | - |
+| 5. CE Interview | Not started | - |
+
+---
+
+*Synced with `docs/plan/MASTER_PLAN.md` — 2026-03-30: CKAD removed from plan; resume = SWE + technical customer lead*

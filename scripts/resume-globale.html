@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dohyun Chung - Resume</title>
+<style>
+
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: letter; margin: 0; }
+
+  :root {
+    --accent: #1a56db;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --light: #f3f4f6;
+    --border: #e5e7eb;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 10.5px;
+    padding: 36px 48px;
+    max-width: 794px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .subtitle {
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .contact {
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact a:hover { color: var(--accent); }
+  .contact .sep { color: #d1d5db; }
+
+  .section-title {
+    font-size: 8.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    margin-top: 18px;
+  }
+
+  .summary {
+    font-size: 10.5px;
+    line-height: 1.55;
+    color: #374151;
+    margin-bottom: 0;
+  }
+
+  .job { margin-bottom: 18px; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0px;
+  }
+
+  .job-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .job-date {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .job-company {
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .job ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: #374151;
+    margin-bottom: 4px;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .job li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8px;
+    top: 1px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-degree {
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  .edu-school {
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .edu-date {
+    font-size: 10px;
+    color: var(--muted);
+    background: var(--light);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .skills {
+    font-size: 10.5px;
+    line-height: 2.4;
+    color: #374151;
+  }
+
+  .skills .row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .skills .cat {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 10px;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Dohyun Chung</h1>
+  <div class="subtitle">Delivery Solutions Engineer &middot; SaaS Integration &amp; API Delivery &middot; Bilingual KR/EN</div>
+  <div class="contact">
+    leahchung99@gmail.com<span class="sep">&nbsp;|&nbsp;</span>New York, NY &middot; Relocating to Seoul (Oct 2026)<span class="sep">&nbsp;|&nbsp;</span><a href="https://dohyun-chung.vercel.app">Portfolio</a><span class="sep">&nbsp;|&nbsp;</span><a href="https://www.linkedin.com/in/dohyun-chung/">LinkedIn</a>
+  </div>
+</div>
+
+<div class="section-title">Summary</div>
+<p class="summary">
+  Bilingual (Korean/English) engineer with 3+ years delivering SaaS/web integrations end-to-end &mdash; technical discovery, data flow design, REST API configuration, SQL and log-based troubleshooting, and customer-facing demos and training. Owns integration lifecycles from scoping through delivery, collaborates cross-functionally with engineering, product, and business stakeholders, and translates complex technical concepts for varied audiences. Korean citizen; available for hybrid work in Seoul.
+</p>
+
+<div class="section-title">Experience</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Software Engineer &amp; Technical Integration Lead</span>
+    <span class="job-date">Apr 2024 &ndash; Present</span>
+  </div>
+  <div class="job-company">Kiss Products, Inc. &mdash; New York, NY</div>
+  <ul>
+    <li>Owned the SAP &harr; Sales Platform integration lifecycle &mdash; technical scoping, data flow mapping, API configuration, and log-based troubleshooting; added observability checkpoints so sync failures surface before they impact business operations.</li>
+    <li>Primary technical contact for external merchant partners on KRS POS &mdash; led integration discovery, product demonstrations, and onboarding; reproduced reported issues by testing REST API endpoints directly and escalated to engineering with clear reproduction steps.</li>
+    <li>Debugged OAuth and REST API failures end-to-end &mdash; reproduced 403 scope errors and token expiry issues, identified misconfigured permission grants, and resolved daily customer access complaints across the platform.</li>
+    <li>Diagnosed customer-reported performance degradation by analyzing server logs and SQL query patterns &mdash; traced root cause to a batch job hitting queue capacity; adjusted configuration to fully restore platform reliability.</li>
+    <li>Built an automated observability tool for the Sales Platform &mdash; reads AWS logs, metrics, and database state in real time, synthesizes anomalies into structured alerts, and routes them proactively to the team.</li>
+    <li>Maintained integration documentation, onboarding guides, and incident post-mortems in a shared knowledge base &mdash; enabling CS and operations teams to resolve common issues independently.</li>
+    <li>Aligned 4 cross-functional teams (vendor engineering, vendor PM, US business, in-house engineering) on a contested delivery plan &mdash; resolved competing priorities and shipped the multi-tenant platform launch on schedule.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Software Engineer &amp; Technical Support</span>
+    <span class="job-date">May 2023 &ndash; Apr 2024</span>
+  </div>
+  <div class="job-company">24/7 Teach &mdash; New York, NY</div>
+  <ul>
+    <li>Technical liaison between 3,000+ end users and engineering &mdash; reproduced ambiguous behavior, traced issues to root cause via logs and API testing, and translated findings into precise bug reports with reproduction steps.</li>
+    <li>Built internal enablement documentation and a knowledge base of failure modes and escalation criteria that shortened investigation time for the entire support team.</li>
+  </ul>
+</div>
+
+<div class="section-title">Education</div>
+<div class="edu-header">
+  <div>
+    <div class="edu-degree">B.A. in Computer Science & Sociology</div>
+    <div class="edu-school">New York University</div>
+  </div>
+  <span class="edu-date">Dec 2023</span>
+</div>
+
+<div class="section-title">Skills</div>
+<div class="skills">
+  <div class="row"><span class="cat">Languages</span> Korean (Native) &middot; English (Fluent)</div>
+  <div class="row"><span class="cat">Integration</span> REST APIs &middot; JSON &middot; HTTP &middot; Webhooks &middot; OAuth &middot; Data Flow Design &middot; System Integration (SaaS/Web)</div>
+  <div class="row"><span class="cat">Data &amp; Debug</span> SQL &middot; Log Analysis &middot; Root-Cause Analysis &middot; API Troubleshooting &middot; Configuration &amp; Deployment Support</div>
+  <div class="row"><span class="cat">Technical</span> JavaScript/TypeScript &middot; Python &middot; HTML/CSS &middot; AWS &middot; Git &middot; Linux</div>
+  <div class="row"><span class="cat">Customer-facing</span> Technical Discovery &middot; Product Demos &middot; Training Documentation &middot; Cross-functional Collaboration &middot; Stakeholder Communication</div>
+</div>
+
+</body>
+</html>
